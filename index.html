@@ -4,10 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>최세현 포트폴리오</title>
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script defer src="./js/h_f.js"></script>
+    <link rel="stylesheet" href="./css/h_f.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <style>
+        #main{
+            height: 5000px;
+        }
+        .articles{
+            height: 1000px;
+        }
+        #article2{
+            background-color: pink;
+        }
+    </style>
 </head>
 <body>
-    <h2>hello</h2>
-    
+    <div id="wrap">
+        <a href="#wrap"><div class="go_top">top</div></a>
+        <header id="header" class="header">
+            <div class="logo_box">
+                <div class="logo logo1"><a href="#wrap"><h1>Portfolio</h1></a></div>
+                <div class="logo logo2"><a href="#wrap"><h4>SEHYEON CHOI</h4></a></div>
+            </div>
+            <ul class="h_menu">
+                <li class="h_menu_li"><a href="#wrap">Home</a></li class="h_menu_li">
+                <li class="h_menu_li"><a href="#article1">Resume</a></li class="h_menu_li">
+                <li class="h_menu_li"><a href="#article2">Projects</a></li class="h_menu_li">
+                <li class="h_menu_li"><a href="#article3">Contact</a></li class="h_menu_li">
+                <li class="h_menu_li"><a href="#article4">???</a></li class="h_menu_li">
+            </ul>
+        </header>
+        <main id="main">
+            <div class="contents_area">
+                <article id="article1" class="articles">
+                    asdf
+                </article>
+                <article id="article2" class="articles">
+                    ㅁㄴㅇㄹ
+                </article>
+                <article id="article3" class="articles"></article>
+                <article id="article4" class="articles"></article>
+            </div>
+        </main>
+        <footer id="footer"></footer>
+    </div>
 </body>
 </html>
