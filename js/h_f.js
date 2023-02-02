@@ -1,7 +1,5 @@
 $(document).ready(function(){
-    
-    /* 스크롤 시 헤더 fixed */
-    $(window).scroll(function(){
+    $.header_evt = function(){
         let header_bot = $(window).scrollTop();
         let header_height = $('#header').height();
         if(header_height <= header_bot){
@@ -16,6 +14,16 @@ $(document).ready(function(){
                 paddingTop: 0
             })
         }
+    }
+    
+    /* 스크롤 시 헤더 fixed */
+    $(window).scroll(function(){
+        $.header_evt();
+    })
+    /* 클릭으로 화면 이동 시에도 헤더 fixed*/
+    $(window).click(function(){
+        $.header_evt();
+
     })
 
     /* top 버튼 */
