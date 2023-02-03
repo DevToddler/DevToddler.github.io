@@ -3,13 +3,13 @@ $(document).ready(function(){
         let header_bot = $(window).scrollTop();
         let header_height = $('#header').height();
         if(header_height <= header_bot){
-            $('#header').addClass('header_event')
+            $('#header').addClass('header_fixed')
             $("#wrap").css({
                 paddingTop: header_height
             })
         }
         else if(header_height >= header_bot){
-            $('#header').removeClass('header_event')
+            $('#header').removeClass('header_fixed')
             $("#wrap").css({
                 paddingTop: 0
             })

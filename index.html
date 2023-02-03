@@ -10,182 +10,359 @@
     <script defer src="./js/h_f.js"></script>
     <link rel="stylesheet" href="./css/h_f.css">
     <link rel="stylesheet" href="./css/index.css">
+    
     <style>
-        /* sections common (섹션 공통) */
+        /* sections common - 섹션 공통 */
         .contents_area{
-            width: 75%;
+            width: 80%;
             margin: 0 auto;
             max-width: 1200px;
         }
         .sections{
-            position: relative;
+            width: 100%;
         }
-        .sec_title{
+        .articles{
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            padding: 18vh 3% 10vh 3%;
+            box-sizing: border-box;
+        }
+        .art_title{
             position: absolute;
-            top: 10%;
+            top: 10vh;
             left: 0;
             font-size: 30px;
             font-weight: 900;
             color: rgb(100, 100, 100);
         }
-        .articles{
-            display: inherit;
-            justify-content: inherit;
-            align-items: inherit;
-            flex-direction: inherit;
-            gap: inherit;
-            position: relative;
-            flex-wrap: inherit;
+        
 
-            /* width: 100%; */
-            height: 100vh;
-            padding: 15vh 3vw 10vh 3vw;
-            box-sizing: border-box;
+        /* section1 ****************************************************/
+        .sec1_art1{
+            height: calc(100vh - 80px);
+            padding-top: 0;
+            padding-bottom: 8vh;
         }
-
-        /* section1 */
-        #section1{
+        .sec1_art1_content{
+            height: 100%;
             display: flex;
             justify-content: space-around;
             align-items: center;
         }
-        .article_first{
-            height: calc(100vh - 80px);
-            padding-bottom: 20vh;
-        }
-        .sec1_txt{
-            width: 65%;
-            padding: 50px;
-            box-sizing: border-box;
-            font-size: 30px;
-            text-align: right;
-        }
-        .sec1_img{
+        .sec1_art1_box1{
             width: 35%;
         }
-        .sec1_img > img{
+        .sec1_art1_box1 > img{
             width: 100%;
         }
+        .sec1_art1_box2{
+            width: 65%;
+            padding-right: 7%;
+            box-sizing: border-box;
+            font-size: 28px;
+            text-align: right;
+        }
 
-        /* section2 */
-        #section2{
+
+        /* section2 ****************************************************/
+        .sec2_art1_content{
+            
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        .sec2_art1_box1{
+            position: absolute;
+            top: -15%;
+            right: 0%;
+            margin: 0 auto;
+            font-size: 28px;
+            font-family: 'Nanum Gothic', sans-serif;
+            font-weight: 600;
+            text-align: right;
+            color: rgb(9, 84, 113);
+        }
+        .sec2_art1_box1 p{
+            margin: 0;
+            padding: 1vh;
+        }
+        .sec2_art1_box2{
+            width: 55%;
+            height: 70%;
+            /* margin: 0 auto; */
+            font-size: 19px;
+            font-family: 'NanumSquareRound';
+        }
+        .box2_p_last{
+            font-size: 14px;
+        }
+        .sec2_art1_box3{
             display: flex;
+            align-items: center;
+            width: 100%;
+            height: 30%;
+        }
+        .sec2_art1_box3_inner{
+            width: calc(100% / 3);
+            font-size: 20px;
+            font-weight: 600;
+            font-family: 'NanumSquareRound';
+            border-top: 2px solid lightgray;
+            border-bottom: 2px solid lightgray;
+        }
+        .box213{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 8vh;
+            text-align: center;
+            position: relative;
+        }
+        .box3_icon{
+            position: absolute;
+            left: 20%;
+            width: 15%;
+            padding-bottom: 15%;
+        }
+        .box3_icon svg{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60%;
+            height: 60%;
+        }
+        /* .sec2_art1_box2_1{
+            width: 13%;
+        }
+        .sec2_art1_box2_2{
+            width: 87%;
+        }
+        .box2_1_inner{
+            width: 100%;
+            position: relative;
+        }
+        .box2_2_inner{
+            width: 100%;
+        }
+        .box2_1_inner, .box2_2_inner{
+            height: 6.5vh;
+            display: flex;
+            align-items: center;
+        }
+        .box2_2_inner > span{
+            display: block;
+            width: 2px;
+            height: 3vh;
+            background-color: gray;
+            margin-right: 5%;
+        } */
+        
+        
+        
+
+        /* section3 ****************************************************/
+        .sec3_art1_content{
+            /* display: flex;
             flex-direction: column;
             align-items: flex-start;
             justify-content: space-evenly;
+            gap: 6vh; */
+            height: 100%;
         }
-
-        /* section3 */
-        #section3{
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: space-evenly;
-            gap: 6vh;
-        }
-        .sec3{
+        .sec3_art1_box1{
             width: 100%;
-        }
-        .sec3_1{
-            height: 40vh;
+            height: 60%;
             display: flex;
             align-items: center;
         }
         
-        .sec3_2 > p{
-            padding-left: 50px;
-            font-size: 20px;
-            font-weight: 900;
-            color: rgb(100, 100, 100);
-        }
         .ul_skills{
-            margin: 0 auto;
-            width: 90%;
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
             flex-wrap: wrap;
-            gap: 30px;
+            gap: 5%;
+
+            margin: 0 auto;
+            width: 90%;
         }
         .ul_skills > li{
             display: flex;
             flex-direction: column;
-            width: 90px;
+
+            width: calc((100% - (5% * 5)) / 6);
+            max-width: 110px;
             transition: all 0.2s;
         }
         .ul_skills > li:hover{
             transform: scale(1.3);
         }
+        .ul_skills1 > li{
+            margin-bottom: 6vh;
+        }
         .skill_svg {
-            width: 70px;
-            height: 70px;
+            width: 65%;
+            padding-bottom: 65%;
             margin: 0 auto;
+            position: relative;
         }
         .skill_svg > svg, .skill_svg > img{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
             width: 100%;
             height: 100%;
         }
         .skill_txt{
+            position: relative;
+            width: 100%;
+            padding-bottom: 45%;
+        }
+        .skill_txt > p{
+            /* display: block; */
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            margin: 0;
+            padding: 0;
             text-align: center;
         }
-        .ul_skill_2 .skill_svg{
-            width: 60px;
-            height: 60px;
+        .ul_skills2 > .skill_svg {
+            width: 55%;
+            padding-bottom: 55%;
             margin: 0 auto;
+            position: relative;
+        }
+        .sec3_art1_box2{
+            width: 100%;
+            height: 40%;
+            display: flex;
+            flex-direction: row;
+            gap: 4%;
+            
+        }
+        .sec3_art1_box2_inner{
+            width: 48%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+        .box2_inner_tit{
+            position: absolute;
+            left: 5%;
+            top: 0;
+            font-size: 24px;
+            font-weight: 900;
+            color: rgb(100, 100, 100);
+        }
+        .ul_skills2{
+            width: 100%;
+        }
+        .ul_skills2 > li{
+            
+            width: calc((100% - (5% * 3)) / 4);
+            max-width: 100px;
+            transition: all 0.2s;
+        }
+        .skill_txt_long{
+            font-size: 13px;
+        }
+        .sec3_bar{
+            width: 0;
+            height: 100%;
+            border: 1px solid lightgray
         }
         
+        
+        
 
-        /* section4 */
-        /* section5 */
-        #section5{
-            display: flex;
+        /* section4 ****************************************************/
+        /* section4 article1 */
+        .sec4_art1_content{
+
+        }
+        /* section4 article2 */
+
+
+        /* section5 ****************************************************/
+        .sec5_art1_content{
+            /* display: flex;
             flex-direction: column;
             align-items: flex-start;
             justify-content: space-evenly;
             flex-wrap: nowrap;
-            gap: 6vh;
+            gap: 6vh; */
+            width: 100%;
+            height: 100%;
         }
-        .article_last{
-            padding-top: 5vh;
-        }
-        .sec5_1{
+        .sec5_art1_box1{
             display: flex;
+            flex-direction: row;
             justify-content: space-around;
             align-items: center;
-            gap: 80px;
+            gap: 6%;
+            width: 100%;
+            /* height: 70%; */
+            padding-top: 12vh;
         }
         .contact_boxs{
-            width: calc(100% / 4);
+            width: calc((100% - (6% * 3))/ 4);
         }
         .contact_icon{
-            width: 200px;
-            height: 200px;
+            width: 80%;
+            padding-bottom: 80%;
+            position: relative;
             margin: 0 auto;
-
+            font-size: 0;
+            display: flex;
+            align-items: center;
             /* padding: 20px 80px; */
         }
         .contact_icon a{
-            display: inline-block;
-            margin: 0 auto;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
             text-align: center;
 
         }
         .contact_icon svg, .contact_icon img{
-            width: 80%;
-            height: 80%;
+            width: 100%;
+            height: 100%;
             transition: all 0.2s;
-            margin: 0 auto;
         }
         .contact_icon svg:hover, .contact_icon img:hover{
             transform: scale(1.2);
         }
         .contact_desc{
+            width: 100%;
+            height: 8vh;
             text-align: center;
-        }
-        .contact_desc{
-            margin-top: 30px;
+            overflow: visible;
+            word-break: break-all;
+            margin-top: 3vh;
             font-size: 20px;
             font-weight: 600;
+        }
+        .thankyou_msg{
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            width: 100%;
+            text-align: center;
+            font-size: 40px;
+            transform: translate(-50%, -50%);
         }
 
     </style>
@@ -207,209 +384,289 @@
             </ul>
         </header>
         <main id="main">
-            <div class="contents_area" class="sections">
-                <section id="section1">
-                    <article class="articles article_first">
-                        <div class="sec1 sec1_img">
-                            <img src="./img/mohammed-saif-tBWwlXV9zCE-unsplash.jpg" alt="home_img">
-                        </div>
-                        <div class="sec1 sec1_txt">
-                            <p>안녕하세요!</p>
-                            <p>올바른 방향으로 나아가기 위해</p>
-                            <p>고민하는 백 엔드 개발자</p>
-                            <p><u>최세현</u> 입니다.</p>
+            <div class="contents_area">
+                <section id="section1" class="sections">
+                    <article class="articles sec1_art1">
+                        <!-- <div class="art_title">
+                            title
+                        </div> -->
+                        <div class="sec1_art1_content">
+                            <div class="sec1_art1_box1">
+                                <img src="./img/mohammed-saif-tBWwlXV9zCE-unsplash.jpg" alt="home_img">
+                            </div>
+                            <div class="sec1_art1_box2">
+                                <p>안녕하세요!</p>
+                                <p>올바른 방향으로 나아가기 위해</p>
+                                <p>고민하는 백 엔드 개발자</p>
+                                <p>최세현 입니다.</p>
+                            </div>
                         </div>
                     </article>
                 </section>
                 <section id="section2" class="sections">
-                    <div class="sec_title">
-                        ABOUT ME
-                    </div>
-                    <article class="articles">
-                        <div class="sec2 sec2_1">
-                            맡은 일은 책임있게 해내는, 함께 일하고 싶은 팀원이 되겠습니다.
+                    <article class="articles sec2_art1">
+                        <div class="art_title">
+                            ABOUT ME
                         </div>
-                        <div class="sec2 sec2_2">
-                            <p>이름 / 마인드셋 / 주소</p>
-                            <p>최세현 / 책임 배려 성장 / 회사와 멀지않은 새로운 보금자리(현재 서울시 관악구)</p>
-                        </div>
-                        <div class="sec2 sec2_3">
-                            <!-- <p>옳은 방향으로 꾸준하게!</p> -->
-                            <p>내가 작성한 코드가 옳은 방향을 향하고 있는지 항상 되돌아보며 고민하는 개발자입니다.</p>
-                            <p>올바른 방향으로 가기위해 항상 스스로 피드백하고 끊임없이 고민하겠습니다.</p>
-                            <p>현재는 JPA를 이용하여 각각의 웹 레이어를 객체 지향적으로 설계하는 게시판 프로젝트를 기획중입니다.</p>
+                        <div class="sec2_art1_content">
+                            <div class="sec2_art1_box1">
+                                <p>맡은 일은 어떻게든 해결해내는,</p>
+                                <p>팀원이 믿고 일할 수 있는</p>
+                                <p>개발자가 되겠습니다.</p>
+                            </div>
+                            <div class="sec2_art1_box2">
+                                <p>내가 작성한 코드가 옳은 방향을 향하고 있는지 항상 스스로 피드백하고 끊임없이 고민하고 있습니다.</p>
+                                <p>내가 현재 적용하려는 기술을 왜 쓰는지? 어떻게 써야 옳게 쓰는 것인지? 단점으로는 어떤 점이 있는지? 다른 해결방법은 없는지? 있지만 덜 쓰인다면 이유가 무엇인지?</p>
+                                <p>궁금한 것이 너무 많아 가끔 지치기도 하지만 끈질긴 연구 끝에 결국 답을 찾아내는 즐거움에 또다시 질문을 던지며 재밌고 행복하게 성장하고 있습니다.</p>
+                                <p>앞으로도 올바른 방향으로 가기위해 끊임없이 고민하는 개발자일 것임을 스스로 다짐합니다.</p>
+                                <p class="box2_p_last">(.....현재는 JPA를 이용하여 스프링 웹 레이어를 객체 지향적으로 설계하는 RESTful 한 게시판 프로젝트를 기획하고 있습니다.)</p>
+                            </div>
+                            <div class="sec2_art1_box3">
+                                <div class="sec2_art1_box3_inner">
+                                    <div class="box213">
+                                        <div class="box3_icon">
+                                            <svg height="200px" width="200px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#000000;} </style> <g> <path class="st0" d="M194.651,414.476c16.23,0,61.349,0,61.349,0s45.111,0,61.35,0c16.222,0,23.587-23.603,14.198-40.285 c-7.072-12.572-18.659-26.826-37.516-34.921c-10.793,7.556-23.905,12-38.032,12c-14.143,0-27.238-4.444-38.032-12 c-18.864,8.095-30.444,22.349-37.523,34.921C171.064,390.873,178.421,414.476,194.651,414.476z"></path> <path class="st0" d="M256,335.476c27.714,0,50.167-22.444,50.167-50.159v-12.016c0-27.714-22.452-50.174-50.167-50.174 c-27.714,0-50.174,22.46-50.174,50.174v12.016C205.826,313.032,228.286,335.476,256,335.476z"></path> <path class="st0" d="M404.977,56.889h-75.834v16.254c0,31.365-25.524,56.889-56.889,56.889h-32.508 c-31.365,0-56.889-25.524-56.889-56.889V56.889h-75.833c-25.445,0-46.072,20.627-46.072,46.071v362.969 c0,25.444,20.627,46.071,46.072,46.071h297.952c25.444,0,46.071-20.627,46.071-46.071V102.96 C451.048,77.516,430.421,56.889,404.977,56.889z M402.286,463.238H109.714V150.349h292.572V463.238z"></path> <path class="st0" d="M239.746,113.778h32.508c22.406,0,40.635-18.23,40.635-40.635V40.635C312.889,18.23,294.659,0,272.254,0 h-32.508c-22.405,0-40.635,18.23-40.635,40.635v32.508C199.111,95.547,217.341,113.778,239.746,113.778z M231.619,40.635 c0-4.492,3.635-8.127,8.127-8.127h32.508c4.493,0,8.127,3.635,8.127,8.127v16.254c0,4.492-3.634,8.127-8.127,8.127h-32.508 c-4.492,0-8.127-3.635-8.127-8.127V40.635z"></path> </g> </g></svg>
+                                        </div>
+                                        <div class="box3_title">이 름</div>
+                                    </div>
+                                    <div class="box213">
+                                        최세현
+                                    </div>
+                                </div>
+                                <div class="sec2_art1_box3_inner">
+                                    <div class="box213">
+                                        <div class="box3_icon">
+                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000000" transform="matrix(1, 0, 0, 1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="none" d="M0 0H24V24H0z"></path> <path d="M11 2c4.068 0 7.426 3.036 7.934 6.965l2.25 3.539c.148.233.118.58-.225.728L19 14.07V17c0 1.105-.895 2-2 2h-1.999L15 22H6v-3.694c0-1.18-.436-2.297-1.244-3.305C3.657 13.631 3 11.892 3 10c0-4.418 3.582-8 8-8zm0 2c-3.314 0-6 2.686-6 6 0 1.385.468 2.693 1.316 3.75C7.41 15.114 8 16.667 8 18.306V20h5l.002-3H17v-4.248l1.55-.664-1.543-2.425-.057-.442C16.566 6.251 14.024 4 11 4zm-.53 3.763l.53.53.53-.53c.684-.684 1.792-.684 2.475 0 .684.683.684 1.791 0 2.474L11 13.243l-3.005-3.006c-.684-.683-.684-1.791 0-2.474.683-.684 1.791-.684 2.475 0z"></path> </g> </g></svg>
+                                        </div>
+                                        <div class="box3_title">마인드 셋</div>
+                                    </div>
+                                    <div class="box213">
+                                        책임, 배려, 주체적 행동
+                                    </div>
+                                </div>
+                                <div class="sec2_art1_box3_inner">
+                                    <div class="box213">
+                                        <div class="box3_icon">
+                                            <svg viewBox="0 0 8.4666669 8.4666669" id="svg8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <defs id="defs2"></defs> <g id="layer1" transform="translate(0,-288.53332)"> <path d="m 4.2324219,288.79688 c -1.6042437,0 -2.9101556,1.30591 -2.9101563,2.91015 -10e-7,2.82277 2.7460938,4.96875 2.7460938,4.96875 a 0.26460978,0.26460978 0 0 0 0.3300781,0 c 0,0 2.7460996,-2.14598 2.7460937,-4.96875 -3.4e-6,-1.60424 -1.3078657,-2.91015 -2.9121093,-2.91015 z m 0,0.52929 c 1.3182605,0 2.3828097,1.0626 2.3828125,2.38086 4.8e-6,2.30926 -2.0910618,4.13374 -2.3808594,4.38086 -0.2884142,-0.24588 -2.3828134,-2.0707 -2.3828125,-4.38086 5e-7,-1.31826 1.0625988,-2.38086 2.3808594,-2.38086 z" id="path929" style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.52916664;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"></path> <path d="m 4.2324219,290.38477 c -0.7274912,0 -1.3222633,0.59477 -1.3222657,1.32226 -4.5e-6,0.7275 0.5947697,1.32422 1.3222657,1.32422 0.727496,0 1.3242233,-0.59672 1.3242187,-1.32422 -2.3e-6,-0.72749 -0.5967275,-1.32226 -1.3242187,-1.32226 z m 0,0.52929 c 0.4415089,0 0.7949204,0.35146 0.7949219,0.79297 2.7e-6,0.44151 -0.35341,0.79492 -0.7949219,0.79492 -0.441512,0 -0.7929715,-0.35341 -0.7929688,-0.79492 1.4e-6,-0.44151 0.3514598,-0.79297 0.7929688,-0.79297 z" id="circle931" style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.52916664;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"></path> </g> </g></svg>
+                                        </div>
+                                        <div class="box3_title">주 소</div>
+                                    </div>
+                                    <div class="box213">
+                                        회사와 가까운 새 보금자리<br>(현재 - 서울시 관악구)
+                                    </div>
+                                </div>
+                                <!-- <div class="sec2_art1_box2_1">
+                                    <div class="box2_1_inner">이 름</div>
+                                    <div class="box2_1_inner">마인드 셋</div>
+                                    <div class="box2_1_inner">주 소</div>
+                                </div>
+                                <div class="sec2_art1_box2_2">
+                                    <div class="box2_2_inner"><span></span>최세현</div>
+                                    <div class="box2_2_inner"><span></span>책임, 배려, 주체적 행동</div>
+                                    <div class="box2_2_inner"><span></span>회사와 가까운 새 보금자리 (현재 서울시 관악구)</div>
+                                </div> -->
+                            </div>
+                            
                         </div>
                     </article>
                 </section>
                 <section id="section3" class="sections">
-                    <div class="sec_title">
-                        SKILLS
-                    </div>
-                    <article class="articles">
-                        <div class="sec3 sec3_1">
-                            <ul class="ul_skills ul_skill_1">
-                                <li>
-                                    <div class="skill_svg">
-                                        <img src="./img/java_logo.png" alt="">
-                                    </div>
-                                    <p class="skill_txt">Java</p>
-                                </li>
-                                <li>
-                                    <div class="skill_svg">
-                                        <svg fill="#6DB33F" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Spring</title><path d="M21.8537 1.4158a10.4504 10.4504 0 0 1-1.284 2.2471A11.9666 11.9666 0 1 0 3.8518 20.7757l.4445.3951a11.9543 11.9543 0 0 0 19.6316-8.2971c.3457-3.0126-.568-6.8649-2.0743-11.458zM5.5805 20.8745a1.0174 1.0174 0 1 1-.1482-1.4323 1.0396 1.0396 0 0 1 .1482 1.4323zm16.1991-3.5806c-2.9385 3.9263-9.2601 2.5928-13.2852 2.7904 0 0-.7161.0494-1.4323.1481 0 0 .2717-.1234.6174-.2469 2.8398-.9877 4.1732-1.1853 5.9018-2.0743 3.2349-1.6545 6.4698-5.2844 7.1118-9.0379-1.2347 3.6053-4.9881 6.7167-8.3959 7.9761-2.3459.8643-6.5685 1.7039-6.5685 1.7039l-.1729-.0988c-2.8645-1.4076-2.9632-7.6304 2.2718-9.6306 2.2966-.889 4.4696-.395 6.9637-.9877 2.6422-.6174 5.7043-2.5929 6.939-5.1857 1.3828 4.1732 3.062 10.643.0493 14.6434z"/></svg>
-                                    </div>
-                                    <p class="skill_txt">Spring</p>
-                                </li>
-                                <li>
-                                    <div class="skill_svg">
-                                        <svg fill="6DB33F" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Spring Boot</title><path d="m23.693 10.7058-4.73-8.1844c-.4094-.7106-1.4166-1.2942-2.2402-1.2942H7.2725c-.819 0-1.8308.5836-2.2402 1.2942L.307 10.7058c-.4095.7106-.4095 1.873 0 2.5837l4.7252 8.189c.4094.7107 1.4166 1.2943 2.2402 1.2943h9.455c.819 0 1.826-.5836 2.2402-1.2942l4.7252-8.189c.4095-.7107.4095-1.8732 0-2.5838zM10.9763 5.7547c0-.5365.4377-.9742.9742-.9742s.9742.4377.9742.9742v5.8217c0 .5366-.4377.9742-.9742.9742s-.9742-.4376-.9742-.9742zm.9742 12.4294c-3.6427 0-6.6077-2.965-6.6077-6.6077.0047-2.0896.993-4.0521 2.6685-5.304a.8657.8657 0 0 1 1.2142.1788.8657.8657 0 0 1-.1788 1.2143c-2.1602 1.6048-2.612 4.6592-1.0072 6.8194 1.6049 2.1603 4.6593 2.612 6.8195 1.0072 1.2378-.9177 1.9673-2.372 1.9673-3.9157a4.8972 4.8972 0 0 0-1.9861-3.925c-.386-.2824-.466-.8284-.1836-1.2143.2824-.386.8283-.466 1.2143-.1835 1.6895 1.2471 2.6826 3.2238 2.6873 5.3228 0 3.6474-2.965 6.6077-6.6077 6.6077z"/></svg>
-                                    </div>
-                                    <p class="skill_txt">SpringBoot</p>
-                                </li>
-                                <li>
-                                    <div class="skill_svg">
-                                        <svg fill="#4479A1" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>MySQL</title><path d="M16.405 5.501c-.115 0-.193.014-.274.033v.013h.014c.054.104.146.18.214.273.054.107.1.214.154.32l.014-.015c.094-.066.14-.172.14-.333-.04-.047-.046-.094-.08-.14-.04-.067-.126-.1-.18-.153zM5.77 18.695h-.927a50.854 50.854 0 00-.27-4.41h-.008l-1.41 4.41H2.45l-1.4-4.41h-.01a72.892 72.892 0 00-.195 4.41H0c.055-1.966.192-3.81.41-5.53h1.15l1.335 4.064h.008l1.347-4.064h1.095c.242 2.015.384 3.86.428 5.53zm4.017-4.08c-.378 2.045-.876 3.533-1.492 4.46-.482.716-1.01 1.073-1.583 1.073-.153 0-.34-.046-.566-.138v-.494c.11.017.24.026.386.026.268 0 .483-.075.647-.222.197-.18.295-.382.295-.605 0-.155-.077-.47-.23-.944L6.23 14.615h.91l.727 2.36c.164.536.233.91.205 1.123.4-1.064.678-2.227.835-3.483zm12.325 4.08h-2.63v-5.53h.885v4.85h1.745zm-3.32.135l-1.016-.5c.09-.076.177-.158.255-.25.433-.506.648-1.258.648-2.253 0-1.83-.718-2.746-2.155-2.746-.704 0-1.254.232-1.65.697-.43.508-.646 1.256-.646 2.245 0 .972.19 1.686.574 2.14.35.41.877.615 1.583.615.264 0 .506-.033.725-.098l1.325.772.36-.622zM15.5 17.588c-.225-.36-.337-.94-.337-1.736 0-1.393.424-2.09 1.27-2.09.443 0 .77.167.977.5.224.362.336.936.336 1.723 0 1.404-.424 2.108-1.27 2.108-.445 0-.77-.167-.978-.5zm-1.658-.425c0 .47-.172.856-.516 1.156-.344.3-.803.45-1.384.45-.543 0-1.064-.172-1.573-.515l.237-.476c.438.22.833.328 1.19.328.332 0 .593-.073.783-.22a.754.754 0 00.3-.615c0-.33-.23-.61-.648-.845-.388-.213-1.163-.657-1.163-.657-.422-.307-.632-.636-.632-1.177 0-.45.157-.81.47-1.085.315-.278.72-.415 1.22-.415.512 0 .98.136 1.4.41l-.213.476a2.726 2.726 0 00-1.064-.23c-.283 0-.502.068-.654.206a.685.685 0 00-.248.524c0 .328.234.61.666.85.393.215 1.187.67 1.187.67.433.305.648.63.648 1.168zm9.382-5.852c-.535-.014-.95.04-1.297.188-.1.04-.26.04-.274.167.055.053.063.14.11.214.08.134.218.313.346.407.14.11.28.216.427.31.26.16.555.255.81.416.145.094.293.213.44.313.073.05.12.14.214.172v-.02c-.046-.06-.06-.147-.105-.214-.067-.067-.134-.127-.2-.193a3.223 3.223 0 00-.695-.675c-.214-.146-.682-.35-.77-.595l-.013-.014c.146-.013.32-.066.46-.106.227-.06.435-.047.67-.106.106-.027.213-.06.32-.094v-.06c-.12-.12-.21-.283-.334-.395a8.867 8.867 0 00-1.104-.823c-.21-.134-.476-.22-.697-.334-.08-.04-.214-.06-.26-.127-.12-.146-.19-.34-.275-.514a17.69 17.69 0 01-.547-1.163c-.12-.262-.193-.523-.34-.763-.69-1.137-1.437-1.826-2.586-2.5-.247-.14-.543-.2-.856-.274-.167-.008-.334-.02-.5-.027-.11-.047-.216-.174-.31-.235-.38-.24-1.364-.76-1.644-.072-.18.434.267.862.422 1.082.115.153.26.328.34.5.047.116.06.235.107.356.106.294.207.622.347.897.073.14.153.287.247.413.054.073.146.107.167.227-.094.136-.1.334-.154.5-.24.757-.146 1.693.194 2.25.107.166.362.534.703.393.3-.12.234-.5.32-.835.02-.08.007-.133.048-.187v.015c.094.188.188.367.274.555.206.328.566.668.867.895.16.12.287.328.487.402v-.02h-.015c-.043-.058-.1-.086-.154-.133a3.445 3.445 0 01-.35-.4 8.76 8.76 0 01-.747-1.218c-.11-.21-.202-.436-.29-.643-.04-.08-.04-.2-.107-.24-.1.146-.247.273-.32.453-.127.288-.14.642-.188 1.01-.027.007-.014 0-.027.014-.214-.052-.287-.274-.367-.46-.2-.475-.233-1.238-.06-1.785.047-.14.247-.582.167-.716-.042-.127-.174-.2-.247-.303a2.478 2.478 0 01-.24-.427c-.16-.374-.24-.788-.414-1.162-.08-.173-.22-.354-.334-.513-.127-.18-.267-.307-.368-.52-.033-.073-.08-.194-.027-.274.014-.054.042-.075.094-.09.088-.072.335.022.422.062.247.1.455.194.662.334.094.066.195.193.315.226h.14c.214.047.455.014.655.073.355.114.675.28.962.46a5.953 5.953 0 012.085 2.286c.08.154.115.295.188.455.14.33.313.663.455.982.14.315.275.636.476.897.1.14.502.213.682.286.133.06.34.115.46.188.23.14.454.3.67.454.11.076.443.243.463.378z"/></svg>
-                                    </div>
-                                    <p class="skill_txt">MySQL</p>
-                                </li>
-                                <li>
-                                    <div class="skill_svg">
-                                        <img src="./img/mybatis_logo.png" alt="mybatis_logo">
-                                    </div>
-                                    <p class="skill_txt">Mybatis</p>
-                                </li>
-                                <li>
-                                    <div class="skill_svg">
-                                        <svg fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 550.801 550.801" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <g> <path d="M373.392,417.304c-5.664,0-9.508,0.543-11.507,1.091v36.355c2.368,0.559,5.289,0.738,9.312,0.738 c14.798,0,23.941-7.499,23.941-20.092C395.134,424.069,387.276,417.304,373.392,417.304z"></path> <path d="M475.095,132c-0.031-2.529-0.833-5.023-2.568-6.995L366.319,3.694c-0.021-0.031-0.053-0.042-0.089-0.074 c-0.628-0.709-1.361-1.292-2.136-1.803c-0.232-0.153-0.465-0.288-0.707-0.422c-0.686-0.369-1.393-0.67-2.136-0.892 c-0.2-0.061-0.374-0.14-0.575-0.195C359.87,0.119,359.037,0,358.198,0H97.2c-11.907,0-21.6,9.695-21.6,21.601v507.6 c0,11.913,9.692,21.601,21.6,21.601h356.4c11.918,0,21.6-9.688,21.6-21.601V133.21C475.2,132.804,475.137,132.398,475.095,132z M212.441,475.042c0,35.079-16.809,47.324-43.854,47.324c-6.392,0-14.795-1.097-20.282-2.922l3.111-22.47 c3.839,1.271,8.765,2.188,14.249,2.188c11.696,0,19.008-5.295,19.008-24.479v-77.478h27.772v77.836H212.441z M265.776,522.182 c-14.067,0-27.949-3.654-34.889-7.494l5.667-23.023c7.488,3.839,18.995,7.678,30.871,7.678c12.793,0,19.556-5.3,19.556-13.347 c0-7.673-5.843-12.05-20.643-17.354c-20.472-7.119-33.803-18.452-33.803-36.355c0-21.015,17.54-37.094,46.596-37.094 c13.878,0,24.103,2.922,31.417,6.213l-6.207,22.47c-4.936-2.368-13.7-5.843-25.766-5.843c-12.053,0-17.896,5.479-17.896,11.87 c0,7.857,6.939,11.338,22.837,17.355c21.731,8.042,31.978,19.38,31.978,36.739C315.483,504.637,299.595,522.182,265.776,522.182z M411.402,463.895c-9.519,8.954-23.572,12.973-40.015,12.973c-3.66,0-6.95-0.18-9.503-0.554v44.033h-27.591v-121.5 c8.575-1.461,20.651-2.558,37.632-2.558c17.181,0,29.426,3.279,37.642,9.861c7.868,6.206,13.162,16.442,13.162,28.497 C422.729,446.703,418.711,456.949,411.402,463.895z M97.2,366.758V21.605h250.204v110.519c0,5.961,4.83,10.8,10.8,10.8h95.396 l0.011,223.834H97.2z"></path> </g> <path d="M257.278,204.473c0,0-14.521-27.968-13.988-48.395c0.39-14.597,33.309-29.03,46.248-49.984 c12.878-20.967-1.629-41.378-1.629-41.378s3.232,15.048-5.368,30.634c-8.594,15.585-40.34,24.737-52.69,51.598 C217.517,173.821,257.278,204.473,257.278,204.473z"></path> <path d="M311.587,119.547c0,0-49.455,18.808-49.455,40.299c0,21.507,13.434,28.493,15.591,35.474 c2.148,6.998-3.755,18.818-3.755,18.818s19.351-13.429,16.103-29.035c-3.228-15.591-18.278-20.424-9.672-36.007 C286.147,138.657,311.587,119.547,311.587,119.547z"></path> <path d="M251.92,232.87c51.018-1.825,57.019-11.43,62.345-16.047c-29.553,8.05-108.023,7.533-108.591,1.613 c-0.52-5.914,24.187-10.758,24.187-10.758s-38.686,0-41.916,9.677C184.708,227.046,206.252,234.471,251.92,232.87z"></path> <path d="M321.78,208.771c0,0,22.043,0,24.189,13.434c2.136,13.431-27.938,33.315-27.938,33.315s47.371-9.542,42.968-33.837 C355.631,192.122,321.78,208.771,321.78,208.771z"></path> <path d="M268.002,247.467c-22.383,2.519-49.431,0.53-51.598-3.246c-2.109-3.763,3.787-5.901,3.787-5.901 c-26.903,6.462-12.203,17.721,19.311,19.899c27.01,1.84,57.193-8.074,57.193-8.074l9.308-7.517 C306.008,242.629,284.713,245.587,268.002,247.467z"></path> <path d="M226.65,266.114c0,0-12.195,0.34-12.902,6.797c-0.72,6.413,3.784,9.672,33.94,8.96 c35.896-0.854,41.882-5.126,45.578-8.234l8.743-6.59c-23.456,3.041-25.27,3.868-38.569,4.245 c-13.376,0.388-36.798,1.237-37.866-1.241C224.488,267.535,226.65,266.114,226.65,266.114z"></path> <path d="M343.818,295.145c4.65-5.031-1.445-8.971-1.445-8.971s2.146,2.516-0.696,5.374c-2.868,2.858-29.035,10.02-70.975,12.165 c-41.913,2.168-87.431-3.928-88.878-9.307c-1.382-5.379,23.316-9.661,23.316-9.661c-2.855,0.358-37.27,1.075-38.367,10.399 c-1.042,9.312,15.05,16.822,79.576,16.822C310.859,311.967,339.178,300.133,343.818,295.145z"></path> <path d="M318.737,316.264c-28.318,5.743-114.278,2.126-114.278,2.126s55.87,13.252,119.657,2.151 c30.486-5.305,32.263-20.07,32.263-20.07S347.045,310.521,318.737,316.264z"></path> </g> </g> </g></svg>
-                                    </div>
-                                    <p class="skill_txt">JSTL</p>
-                                </li>
-                                <li>
-                                    <div class="skill_svg">
-                                        <svg fill="#E34F26" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>HTML5</title><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/></svg>
-                                    </div>
-                                    <p class="skill_txt">HTML5</p>
-                                </li>
-                                <li>
-                                    <div class="skill_svg">
-                                        <svg fill="#1572B6" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>CSS3</title><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z"/></svg>
-                                    </div>
-                                    <p class="skill_txt">CSS3</p>
-                                </li>
-                                <li>
-                                    <div class="skill_svg">
-                                        <svg fill="#F7DF1E" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>JavaScript</title><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/></svg>
-                                    </div>
-                                    <p class="skill_txt">JavaScript</p>
-                                </li>
-                                <li>
-                                    <div class="skill_svg">
-                                        <svg fill="#0769AD" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>jQuery</title><path d="M1.525 5.87c-2.126 3.054-1.862 7.026-.237 10.269.037.079.078.154.118.229.023.052.049.1.077.15.013.027.031.056.047.082.026.052.054.102.081.152l.157.266c.03.049.057.097.09.146.056.094.12.187.178.281.026.04.05.078.079.117a6.368 6.368 0 00.31.445c.078.107.156.211.24.315.027.038.058.076.086.115l.22.269c.028.03.055.067.084.099.098.118.202.233.306.35l.005.006a3.134 3.134 0 00.425.44c.08.083.16.165.245.245l.101.097c.111.105.223.209.34.309.002 0 .003.002.005.003l.057.05c.102.089.205.178.31.26l.125.105c.085.068.174.133.26.2l.137.105c.093.07.192.139.287.207.035.025.07.05.106.073l.03.023.28.185.12.08c.148.094.294.184.44.272.041.02.084.044.123.068.108.062.22.125.329.183.06.034.122.063.184.094.075.042.153.083.234.125a.324.324 0 01.056.023c.033.015.064.031.096.047.12.06.245.118.375.175.024.01.05.02.076.034.144.063.289.123.438.182.034.01.07.027.105.04.135.051.274.103.411.152l.05.018c.154.052.305.102.46.15.036.01.073.023.111.033.16.048.314.105.474.137 10.273 1.872 13.258-6.177 13.258-6.177-2.508 3.266-6.958 4.127-11.174 3.169-.156-.036-.312-.086-.47-.132a13.539 13.539 0 01-.567-.182l-.062-.024c-.136-.046-.267-.097-.4-.148a1.615 1.615 0 00-.11-.04c-.148-.06-.29-.121-.433-.184-.031-.01-.057-.024-.088-.036a23.44 23.44 0 01-.362-.17 1.485 1.485 0 01-.106-.052c-.094-.044-.188-.095-.28-.143a3.947 3.947 0 01-.187-.096c-.114-.06-.227-.125-.34-.187-.034-.024-.073-.044-.112-.066a15.922 15.922 0 01-.439-.27 2.107 2.107 0 01-.118-.078 6.01 6.01 0 01-.312-.207c-.035-.023-.067-.048-.103-.073a9.553 9.553 0 01-.295-.212c-.042-.034-.087-.066-.132-.1-.088-.07-.177-.135-.265-.208l-.118-.095a10.593 10.593 0 01-.335-.28.258.258 0 00-.037-.031l-.347-.316-.1-.094c-.082-.084-.166-.164-.25-.246l-.098-.1a9.081 9.081 0 01-.309-.323l-.015-.016c-.106-.116-.21-.235-.313-.355-.027-.03-.053-.064-.08-.097l-.227-.277a21.275 21.275 0 01-.34-.449C2.152 11.79 1.306 7.384 3.177 3.771m4.943-.473c-1.54 2.211-1.454 5.169-.254 7.508a9.111 9.111 0 00.678 1.133c.23.33.484.721.793.988.107.122.223.24.344.36l.09.09c.114.11.232.217.35.325l.016.013a9.867 9.867 0 00.414.342c.034.023.063.05.096.073.14.108.282.212.428.316l.015.009c.062.045.128.086.198.13.028.018.06.042.09.06.106.068.21.132.318.197.017.007.032.016.048.023.09.055.188.108.282.157.033.02.065.035.1.054.066.033.132.068.197.102l.032.014c.135.067.273.129.408.19.034.014.063.025.092.039.111.048.224.094.336.137.05.017.097.037.144.052.102.038.21.073.31.108l.14.045c.147.045.295.104.449.13C22.164 17.206 24 11.098 24 11.098c-1.653 2.38-4.852 3.513-8.261 2.628a8.04 8.04 0 01-.449-.13c-.048-.014-.09-.029-.136-.043-.104-.036-.211-.07-.312-.109l-.144-.054c-.113-.045-.227-.087-.336-.135-.034-.015-.065-.025-.091-.04-.14-.063-.281-.125-.418-.192l-.206-.107-.119-.06a5.673 5.673 0 01-.265-.15.62.62 0 01-.062-.035c-.106-.066-.217-.13-.318-.198-.034-.019-.065-.042-.097-.062l-.208-.136c-.144-.1-.285-.208-.428-.313-.032-.029-.063-.053-.094-.079-1.499-1.178-2.681-2.79-3.242-4.613-.59-1.897-.46-4.023.56-5.75m4.292-.147c-.909 1.334-.996 2.99-.37 4.46.665 1.563 2.024 2.79 3.608 3.37.065.025.128.046.196.07l.088.027c.092.03.185.063.28.084 4.381.845 5.567-2.25 5.886-2.704-1.043 1.498-2.792 1.857-4.938 1.335a4.85 4.85 0 01-.516-.16 6.352 6.352 0 01-.618-.254 6.53 6.53 0 01-1.082-.66c-1.922-1.457-3.113-4.236-1.859-6.5"/></svg>
-                                    </div>
-                                    <p class="skill_txt">jQuery</p>
-                                </li>
-                                <li>
-                                    <div class="skill_svg">
-                                        <img src="./img/ajax_logo.png" alt="ajax_logo">
-                                    </div>
-                                    <p class="skill_txt">AJAX</p>
-                                </li>
-                                <li>
-                                    <div class="skill_svg">
-                                        <svg fill="#F05032" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Git</title><path d="M23.546 10.93L13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441.516.515.658 1.258.438 1.9l2.658 2.66c.645-.223 1.387-.078 1.9.435.721.72.721 1.884 0 2.604-.719.719-1.881.719-2.6 0-.539-.541-.674-1.337-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348.713.721.713 1.883 0 2.6-.719.721-1.889.721-2.609 0-.719-.719-.719-1.879 0-2.598.182-.18.387-.316.605-.406V8.835c-.217-.091-.424-.222-.6-.401-.545-.545-.676-1.342-.396-2.009L7.636 3.7.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477c.604.604 1.582.604 2.186 0l10.43-10.43c.605-.603.605-1.582 0-2.187"/></svg>
-                                    </div>
-                                    <p class="skill_txt">Git</p>
-                                </li>
-                                <li>
-                                    <div class="skill_svg">
-                                        <svg fill="#179287" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitKraken</title><path d="M23.225 6.252a.478.478 0 00-.923.171c0 .053.013.119.026.171 2.15 5.71-.751 12.077-6.46 14.226a10.9 10.9 0 01-2.426.607v-5.155c.33-.066.646-.158.962-.264v4.338c5.445-1.332 8.794-6.817 7.463-12.262a10.147 10.147 0 00-4.958-6.487.472.472 0 00-.646.185.472.472 0 00.185.646c4.443 2.452 6.051 8.056 3.6 12.499a9.13 9.13 0 01-4.681 4.1v-3.836a1.472 1.472 0 001.028-1.398c0-.527-.264-1.002-.725-1.266.343-3.309 1.859-2.439 1.859-3.493v-.62c0-1.582-3.665-6.737-5.38-6.856h-.316c-1.714.119-5.379 5.274-5.379 6.856v.62c0 1.054 1.503.184 1.859 3.493a1.461 1.461 0 00-.725 1.266c0 .646.422 1.2 1.028 1.398v3.836C3.91 17.168 1.59 11.83 3.448 7.11a9.24 9.24 0 014.1-4.68.479.479 0 00.185-.66.487.487 0 00-.422-.237.444.444 0 00-.224.065 10.142 10.142 0 00-3.982 13.791 10.147 10.147 0 006.487 4.958V16.02c.316.106.633.198.962.264v5.155C4.503 20.636.257 15.085 1.062 9.034a10.9 10.9 0 01.606-2.426.489.489 0 00-.277-.62.494.494 0 00-.62.277c-2.333 6.21.805 13.131 7.015 15.452 1.2.448 2.452.699 3.73.751v-6.09c.172.012.489.012.489.012s.316 0 .488-.013v6.078c6.631-.277 11.773-5.867 11.496-12.499a12.458 12.458 0 00-.764-3.704zm-9.019 6.842a.995.995 0 011.398 0 .995.995 0 010 1.398.995.995 0 01-1.398 0 .988.988 0 010-1.398zm-4.43 1.398a.979.979 0 01-1.384 0 .995.995 0 010-1.398.995.995 0 011.398 0 .983.983 0 01-.013 1.398z"/></svg>
-                                    </div>
-                                    <p class="skill_txt">GitKraken</p>
-                                </li>
-                            </ul>
+                    <article class="articles sec3_art1">
+                        <div class="art_title">
+                            SKILLS
                         </div>
-                        <div class="sec3 sec3_2">
-                            <p>Now Studying</p>
-                            <ul class="ul_skills ul_skill_2">
-                                <li>
-                                    <div class="skill_svg">
-                                        <img src="./img/jpa_logo.png" alt="">
-                                    </div>
-                                    <p class="skill_txt">JPA</p>
-                                </li>
-                                <li>
-                                    <div class="skill_svg">
-                                        <svg fill="#005F0F" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Thymeleaf</title><path d="M1.727 0C.782 0 .02.761.02 1.707v20.586C.02 23.24.782 24 1.727 24h20.546c.945 0 1.707-.761 1.707-1.707V1.707C23.98.76 23.218 0 22.273 0H1.727zm18.714 3.273c-1.861 3.694-3.3 7.627-5.674 11.046-1.064 1.574-2.329 3.163-4.16 3.86-1.31.552-2.936.337-3.98-.647-.628-.523-.54-1.43-.173-2.075.96-1.224 2.34-2.02 3.59-2.915 3.842-2.625 7.446-5.654 10.397-9.27zm-1.693 1.25c-2.503 2.751-5.381 5.16-8.452 7.269l-.003.002-.003.003c-1.327.979-2.835 1.824-3.993 3.114-.349.333-.583 1.042-.537 1.481-.622-1.043-.8-2.614-.257-3.74.526-1.19 1.742-1.807 2.876-2.292 3.757-1.353 6.695-2.926 10.369-5.836z"/></svg>
-                                    </div>
-                                    <p class="skill_txt">Thymeleaf</p>
-                                </li>
-                                <li>
-                                    <div class="skill_svg">
-                                        <svg fill="#6DB33F" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Spring Security</title><path d="M20.59 2.066 11.993 0 3.41 2.066v6.612h4.557a3.804 3.804 0 0 0 0 .954H3.41v3.106C3.41 19.867 11.994 24 11.994 24s8.582-4.133 8.582-11.258V9.635h-4.545a3.616 3.616 0 0 0 0-.954h4.558zM12 12.262h-.006a3.109 3.109 0 1 1 .006 0zm-.006-4.579a.804.804 0 0 0-.37 1.52v.208l.238.237v.159l.159.159v.159l-.14.14.15.246v.159l-.16.189.223.222.246-.246V9.218a.804.804 0 0 0-.346-1.535zm0 .836a.299.299 0 1 1 .298-.299.299.299 0 0 1-.298.3z"/></svg>
-                                    </div>
-                                    <p class="skill_txt">Spring<br>Security</p>
-                                </li>
-                            </ul>
+                        <div class="sec3_art1_content">
+                            <div class="sec3_art1_box1">
+                                <ul class="ul_skills ul_skills1">
+                                    <li>
+                                        <div class="skill_svg">
+                                            <img src="./img/java_logo.png" alt="">
+                                        </div>
+                                        <div class="skill_txt"><p>Java</p></div>
+                                    </li>
+                                    <li>
+                                        <div class="skill_svg">
+                                            <svg fill="#6DB33F" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Spring</title><path d="M21.8537 1.4158a10.4504 10.4504 0 0 1-1.284 2.2471A11.9666 11.9666 0 1 0 3.8518 20.7757l.4445.3951a11.9543 11.9543 0 0 0 19.6316-8.2971c.3457-3.0126-.568-6.8649-2.0743-11.458zM5.5805 20.8745a1.0174 1.0174 0 1 1-.1482-1.4323 1.0396 1.0396 0 0 1 .1482 1.4323zm16.1991-3.5806c-2.9385 3.9263-9.2601 2.5928-13.2852 2.7904 0 0-.7161.0494-1.4323.1481 0 0 .2717-.1234.6174-.2469 2.8398-.9877 4.1732-1.1853 5.9018-2.0743 3.2349-1.6545 6.4698-5.2844 7.1118-9.0379-1.2347 3.6053-4.9881 6.7167-8.3959 7.9761-2.3459.8643-6.5685 1.7039-6.5685 1.7039l-.1729-.0988c-2.8645-1.4076-2.9632-7.6304 2.2718-9.6306 2.2966-.889 4.4696-.395 6.9637-.9877 2.6422-.6174 5.7043-2.5929 6.939-5.1857 1.3828 4.1732 3.062 10.643.0493 14.6434z"/></svg>
+                                        </div>
+                                        <div class="skill_txt"><p>Spring</p></div>
+                                    </li>
+                                    <li>
+                                        <div class="skill_svg">
+                                            <svg fill="6DB33F" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Spring Boot</title><path d="m23.693 10.7058-4.73-8.1844c-.4094-.7106-1.4166-1.2942-2.2402-1.2942H7.2725c-.819 0-1.8308.5836-2.2402 1.2942L.307 10.7058c-.4095.7106-.4095 1.873 0 2.5837l4.7252 8.189c.4094.7107 1.4166 1.2943 2.2402 1.2943h9.455c.819 0 1.826-.5836 2.2402-1.2942l4.7252-8.189c.4095-.7107.4095-1.8732 0-2.5838zM10.9763 5.7547c0-.5365.4377-.9742.9742-.9742s.9742.4377.9742.9742v5.8217c0 .5366-.4377.9742-.9742.9742s-.9742-.4376-.9742-.9742zm.9742 12.4294c-3.6427 0-6.6077-2.965-6.6077-6.6077.0047-2.0896.993-4.0521 2.6685-5.304a.8657.8657 0 0 1 1.2142.1788.8657.8657 0 0 1-.1788 1.2143c-2.1602 1.6048-2.612 4.6592-1.0072 6.8194 1.6049 2.1603 4.6593 2.612 6.8195 1.0072 1.2378-.9177 1.9673-2.372 1.9673-3.9157a4.8972 4.8972 0 0 0-1.9861-3.925c-.386-.2824-.466-.8284-.1836-1.2143.2824-.386.8283-.466 1.2143-.1835 1.6895 1.2471 2.6826 3.2238 2.6873 5.3228 0 3.6474-2.965 6.6077-6.6077 6.6077z"/></svg>
+                                        </div>
+                                        <div class="skill_txt"><p>SpringBoot</p></div>
+                                    </li>
+                                    <li>
+                                        <div class="skill_svg">
+                                            <svg fill="#4479A1" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>MySQL</title><path d="M16.405 5.501c-.115 0-.193.014-.274.033v.013h.014c.054.104.146.18.214.273.054.107.1.214.154.32l.014-.015c.094-.066.14-.172.14-.333-.04-.047-.046-.094-.08-.14-.04-.067-.126-.1-.18-.153zM5.77 18.695h-.927a50.854 50.854 0 00-.27-4.41h-.008l-1.41 4.41H2.45l-1.4-4.41h-.01a72.892 72.892 0 00-.195 4.41H0c.055-1.966.192-3.81.41-5.53h1.15l1.335 4.064h.008l1.347-4.064h1.095c.242 2.015.384 3.86.428 5.53zm4.017-4.08c-.378 2.045-.876 3.533-1.492 4.46-.482.716-1.01 1.073-1.583 1.073-.153 0-.34-.046-.566-.138v-.494c.11.017.24.026.386.026.268 0 .483-.075.647-.222.197-.18.295-.382.295-.605 0-.155-.077-.47-.23-.944L6.23 14.615h.91l.727 2.36c.164.536.233.91.205 1.123.4-1.064.678-2.227.835-3.483zm12.325 4.08h-2.63v-5.53h.885v4.85h1.745zm-3.32.135l-1.016-.5c.09-.076.177-.158.255-.25.433-.506.648-1.258.648-2.253 0-1.83-.718-2.746-2.155-2.746-.704 0-1.254.232-1.65.697-.43.508-.646 1.256-.646 2.245 0 .972.19 1.686.574 2.14.35.41.877.615 1.583.615.264 0 .506-.033.725-.098l1.325.772.36-.622zM15.5 17.588c-.225-.36-.337-.94-.337-1.736 0-1.393.424-2.09 1.27-2.09.443 0 .77.167.977.5.224.362.336.936.336 1.723 0 1.404-.424 2.108-1.27 2.108-.445 0-.77-.167-.978-.5zm-1.658-.425c0 .47-.172.856-.516 1.156-.344.3-.803.45-1.384.45-.543 0-1.064-.172-1.573-.515l.237-.476c.438.22.833.328 1.19.328.332 0 .593-.073.783-.22a.754.754 0 00.3-.615c0-.33-.23-.61-.648-.845-.388-.213-1.163-.657-1.163-.657-.422-.307-.632-.636-.632-1.177 0-.45.157-.81.47-1.085.315-.278.72-.415 1.22-.415.512 0 .98.136 1.4.41l-.213.476a2.726 2.726 0 00-1.064-.23c-.283 0-.502.068-.654.206a.685.685 0 00-.248.524c0 .328.234.61.666.85.393.215 1.187.67 1.187.67.433.305.648.63.648 1.168zm9.382-5.852c-.535-.014-.95.04-1.297.188-.1.04-.26.04-.274.167.055.053.063.14.11.214.08.134.218.313.346.407.14.11.28.216.427.31.26.16.555.255.81.416.145.094.293.213.44.313.073.05.12.14.214.172v-.02c-.046-.06-.06-.147-.105-.214-.067-.067-.134-.127-.2-.193a3.223 3.223 0 00-.695-.675c-.214-.146-.682-.35-.77-.595l-.013-.014c.146-.013.32-.066.46-.106.227-.06.435-.047.67-.106.106-.027.213-.06.32-.094v-.06c-.12-.12-.21-.283-.334-.395a8.867 8.867 0 00-1.104-.823c-.21-.134-.476-.22-.697-.334-.08-.04-.214-.06-.26-.127-.12-.146-.19-.34-.275-.514a17.69 17.69 0 01-.547-1.163c-.12-.262-.193-.523-.34-.763-.69-1.137-1.437-1.826-2.586-2.5-.247-.14-.543-.2-.856-.274-.167-.008-.334-.02-.5-.027-.11-.047-.216-.174-.31-.235-.38-.24-1.364-.76-1.644-.072-.18.434.267.862.422 1.082.115.153.26.328.34.5.047.116.06.235.107.356.106.294.207.622.347.897.073.14.153.287.247.413.054.073.146.107.167.227-.094.136-.1.334-.154.5-.24.757-.146 1.693.194 2.25.107.166.362.534.703.393.3-.12.234-.5.32-.835.02-.08.007-.133.048-.187v.015c.094.188.188.367.274.555.206.328.566.668.867.895.16.12.287.328.487.402v-.02h-.015c-.043-.058-.1-.086-.154-.133a3.445 3.445 0 01-.35-.4 8.76 8.76 0 01-.747-1.218c-.11-.21-.202-.436-.29-.643-.04-.08-.04-.2-.107-.24-.1.146-.247.273-.32.453-.127.288-.14.642-.188 1.01-.027.007-.014 0-.027.014-.214-.052-.287-.274-.367-.46-.2-.475-.233-1.238-.06-1.785.047-.14.247-.582.167-.716-.042-.127-.174-.2-.247-.303a2.478 2.478 0 01-.24-.427c-.16-.374-.24-.788-.414-1.162-.08-.173-.22-.354-.334-.513-.127-.18-.267-.307-.368-.52-.033-.073-.08-.194-.027-.274.014-.054.042-.075.094-.09.088-.072.335.022.422.062.247.1.455.194.662.334.094.066.195.193.315.226h.14c.214.047.455.014.655.073.355.114.675.28.962.46a5.953 5.953 0 012.085 2.286c.08.154.115.295.188.455.14.33.313.663.455.982.14.315.275.636.476.897.1.14.502.213.682.286.133.06.34.115.46.188.23.14.454.3.67.454.11.076.443.243.463.378z"/></svg>
+                                        </div>
+                                        <div class="skill_txt"><p>MySQL</p></div>
+                                    </li>
+                                    <li>
+                                        <div class="skill_svg">
+                                            <img src="./img/mybatis_logo.png" alt="mybatis_logo">
+                                        </div>
+                                        <div class="skill_txt"><p>Mybatis</p></div>
+                                    </li>
+                                    <li>
+                                        <div class="skill_svg">
+                                            <svg fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 550.801 550.801" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <g> <path d="M373.392,417.304c-5.664,0-9.508,0.543-11.507,1.091v36.355c2.368,0.559,5.289,0.738,9.312,0.738 c14.798,0,23.941-7.499,23.941-20.092C395.134,424.069,387.276,417.304,373.392,417.304z"></path> <path d="M475.095,132c-0.031-2.529-0.833-5.023-2.568-6.995L366.319,3.694c-0.021-0.031-0.053-0.042-0.089-0.074 c-0.628-0.709-1.361-1.292-2.136-1.803c-0.232-0.153-0.465-0.288-0.707-0.422c-0.686-0.369-1.393-0.67-2.136-0.892 c-0.2-0.061-0.374-0.14-0.575-0.195C359.87,0.119,359.037,0,358.198,0H97.2c-11.907,0-21.6,9.695-21.6,21.601v507.6 c0,11.913,9.692,21.601,21.6,21.601h356.4c11.918,0,21.6-9.688,21.6-21.601V133.21C475.2,132.804,475.137,132.398,475.095,132z M212.441,475.042c0,35.079-16.809,47.324-43.854,47.324c-6.392,0-14.795-1.097-20.282-2.922l3.111-22.47 c3.839,1.271,8.765,2.188,14.249,2.188c11.696,0,19.008-5.295,19.008-24.479v-77.478h27.772v77.836H212.441z M265.776,522.182 c-14.067,0-27.949-3.654-34.889-7.494l5.667-23.023c7.488,3.839,18.995,7.678,30.871,7.678c12.793,0,19.556-5.3,19.556-13.347 c0-7.673-5.843-12.05-20.643-17.354c-20.472-7.119-33.803-18.452-33.803-36.355c0-21.015,17.54-37.094,46.596-37.094 c13.878,0,24.103,2.922,31.417,6.213l-6.207,22.47c-4.936-2.368-13.7-5.843-25.766-5.843c-12.053,0-17.896,5.479-17.896,11.87 c0,7.857,6.939,11.338,22.837,17.355c21.731,8.042,31.978,19.38,31.978,36.739C315.483,504.637,299.595,522.182,265.776,522.182z M411.402,463.895c-9.519,8.954-23.572,12.973-40.015,12.973c-3.66,0-6.95-0.18-9.503-0.554v44.033h-27.591v-121.5 c8.575-1.461,20.651-2.558,37.632-2.558c17.181,0,29.426,3.279,37.642,9.861c7.868,6.206,13.162,16.442,13.162,28.497 C422.729,446.703,418.711,456.949,411.402,463.895z M97.2,366.758V21.605h250.204v110.519c0,5.961,4.83,10.8,10.8,10.8h95.396 l0.011,223.834H97.2z"></path> </g> <path d="M257.278,204.473c0,0-14.521-27.968-13.988-48.395c0.39-14.597,33.309-29.03,46.248-49.984 c12.878-20.967-1.629-41.378-1.629-41.378s3.232,15.048-5.368,30.634c-8.594,15.585-40.34,24.737-52.69,51.598 C217.517,173.821,257.278,204.473,257.278,204.473z"></path> <path d="M311.587,119.547c0,0-49.455,18.808-49.455,40.299c0,21.507,13.434,28.493,15.591,35.474 c2.148,6.998-3.755,18.818-3.755,18.818s19.351-13.429,16.103-29.035c-3.228-15.591-18.278-20.424-9.672-36.007 C286.147,138.657,311.587,119.547,311.587,119.547z"></path> <path d="M251.92,232.87c51.018-1.825,57.019-11.43,62.345-16.047c-29.553,8.05-108.023,7.533-108.591,1.613 c-0.52-5.914,24.187-10.758,24.187-10.758s-38.686,0-41.916,9.677C184.708,227.046,206.252,234.471,251.92,232.87z"></path> <path d="M321.78,208.771c0,0,22.043,0,24.189,13.434c2.136,13.431-27.938,33.315-27.938,33.315s47.371-9.542,42.968-33.837 C355.631,192.122,321.78,208.771,321.78,208.771z"></path> <path d="M268.002,247.467c-22.383,2.519-49.431,0.53-51.598-3.246c-2.109-3.763,3.787-5.901,3.787-5.901 c-26.903,6.462-12.203,17.721,19.311,19.899c27.01,1.84,57.193-8.074,57.193-8.074l9.308-7.517 C306.008,242.629,284.713,245.587,268.002,247.467z"></path> <path d="M226.65,266.114c0,0-12.195,0.34-12.902,6.797c-0.72,6.413,3.784,9.672,33.94,8.96 c35.896-0.854,41.882-5.126,45.578-8.234l8.743-6.59c-23.456,3.041-25.27,3.868-38.569,4.245 c-13.376,0.388-36.798,1.237-37.866-1.241C224.488,267.535,226.65,266.114,226.65,266.114z"></path> <path d="M343.818,295.145c4.65-5.031-1.445-8.971-1.445-8.971s2.146,2.516-0.696,5.374c-2.868,2.858-29.035,10.02-70.975,12.165 c-41.913,2.168-87.431-3.928-88.878-9.307c-1.382-5.379,23.316-9.661,23.316-9.661c-2.855,0.358-37.27,1.075-38.367,10.399 c-1.042,9.312,15.05,16.822,79.576,16.822C310.859,311.967,339.178,300.133,343.818,295.145z"></path> <path d="M318.737,316.264c-28.318,5.743-114.278,2.126-114.278,2.126s55.87,13.252,119.657,2.151 c30.486-5.305,32.263-20.07,32.263-20.07S347.045,310.521,318.737,316.264z"></path> </g> </g> </g></svg>
+                                        </div>
+                                        <div class="skill_txt"><p>JSTL</p></div>
+                                    </li>
+                                    <li>
+                                        <div class="skill_svg">
+                                            <svg fill="#E34F26" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>HTML5</title><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/></svg>
+                                        </div>
+                                        <div class="skill_txt"><p>HTML5</p></div>
+                                    </li>
+                                    <li>
+                                        <div class="skill_svg">
+                                            <svg fill="#1572B6" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>CSS3</title><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z"/></svg>
+                                        </div>
+                                        <div class="skill_txt"><p>CSS3</p></div>
+                                    </li>
+                                    <li>
+                                        <div class="skill_svg">
+                                            <svg fill="#F7DF1E" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>JavaScript</title><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/></svg>
+                                        </div>
+                                        <div class="skill_txt"><p>JavaScript</p></div>
+                                    </li>
+                                    <li>
+                                        <div class="skill_svg">
+                                            <svg fill="#0769AD" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>jQuery</title><path d="M1.525 5.87c-2.126 3.054-1.862 7.026-.237 10.269.037.079.078.154.118.229.023.052.049.1.077.15.013.027.031.056.047.082.026.052.054.102.081.152l.157.266c.03.049.057.097.09.146.056.094.12.187.178.281.026.04.05.078.079.117a6.368 6.368 0 00.31.445c.078.107.156.211.24.315.027.038.058.076.086.115l.22.269c.028.03.055.067.084.099.098.118.202.233.306.35l.005.006a3.134 3.134 0 00.425.44c.08.083.16.165.245.245l.101.097c.111.105.223.209.34.309.002 0 .003.002.005.003l.057.05c.102.089.205.178.31.26l.125.105c.085.068.174.133.26.2l.137.105c.093.07.192.139.287.207.035.025.07.05.106.073l.03.023.28.185.12.08c.148.094.294.184.44.272.041.02.084.044.123.068.108.062.22.125.329.183.06.034.122.063.184.094.075.042.153.083.234.125a.324.324 0 01.056.023c.033.015.064.031.096.047.12.06.245.118.375.175.024.01.05.02.076.034.144.063.289.123.438.182.034.01.07.027.105.04.135.051.274.103.411.152l.05.018c.154.052.305.102.46.15.036.01.073.023.111.033.16.048.314.105.474.137 10.273 1.872 13.258-6.177 13.258-6.177-2.508 3.266-6.958 4.127-11.174 3.169-.156-.036-.312-.086-.47-.132a13.539 13.539 0 01-.567-.182l-.062-.024c-.136-.046-.267-.097-.4-.148a1.615 1.615 0 00-.11-.04c-.148-.06-.29-.121-.433-.184-.031-.01-.057-.024-.088-.036a23.44 23.44 0 01-.362-.17 1.485 1.485 0 01-.106-.052c-.094-.044-.188-.095-.28-.143a3.947 3.947 0 01-.187-.096c-.114-.06-.227-.125-.34-.187-.034-.024-.073-.044-.112-.066a15.922 15.922 0 01-.439-.27 2.107 2.107 0 01-.118-.078 6.01 6.01 0 01-.312-.207c-.035-.023-.067-.048-.103-.073a9.553 9.553 0 01-.295-.212c-.042-.034-.087-.066-.132-.1-.088-.07-.177-.135-.265-.208l-.118-.095a10.593 10.593 0 01-.335-.28.258.258 0 00-.037-.031l-.347-.316-.1-.094c-.082-.084-.166-.164-.25-.246l-.098-.1a9.081 9.081 0 01-.309-.323l-.015-.016c-.106-.116-.21-.235-.313-.355-.027-.03-.053-.064-.08-.097l-.227-.277a21.275 21.275 0 01-.34-.449C2.152 11.79 1.306 7.384 3.177 3.771m4.943-.473c-1.54 2.211-1.454 5.169-.254 7.508a9.111 9.111 0 00.678 1.133c.23.33.484.721.793.988.107.122.223.24.344.36l.09.09c.114.11.232.217.35.325l.016.013a9.867 9.867 0 00.414.342c.034.023.063.05.096.073.14.108.282.212.428.316l.015.009c.062.045.128.086.198.13.028.018.06.042.09.06.106.068.21.132.318.197.017.007.032.016.048.023.09.055.188.108.282.157.033.02.065.035.1.054.066.033.132.068.197.102l.032.014c.135.067.273.129.408.19.034.014.063.025.092.039.111.048.224.094.336.137.05.017.097.037.144.052.102.038.21.073.31.108l.14.045c.147.045.295.104.449.13C22.164 17.206 24 11.098 24 11.098c-1.653 2.38-4.852 3.513-8.261 2.628a8.04 8.04 0 01-.449-.13c-.048-.014-.09-.029-.136-.043-.104-.036-.211-.07-.312-.109l-.144-.054c-.113-.045-.227-.087-.336-.135-.034-.015-.065-.025-.091-.04-.14-.063-.281-.125-.418-.192l-.206-.107-.119-.06a5.673 5.673 0 01-.265-.15.62.62 0 01-.062-.035c-.106-.066-.217-.13-.318-.198-.034-.019-.065-.042-.097-.062l-.208-.136c-.144-.1-.285-.208-.428-.313-.032-.029-.063-.053-.094-.079-1.499-1.178-2.681-2.79-3.242-4.613-.59-1.897-.46-4.023.56-5.75m4.292-.147c-.909 1.334-.996 2.99-.37 4.46.665 1.563 2.024 2.79 3.608 3.37.065.025.128.046.196.07l.088.027c.092.03.185.063.28.084 4.381.845 5.567-2.25 5.886-2.704-1.043 1.498-2.792 1.857-4.938 1.335a4.85 4.85 0 01-.516-.16 6.352 6.352 0 01-.618-.254 6.53 6.53 0 01-1.082-.66c-1.922-1.457-3.113-4.236-1.859-6.5"/></svg>
+                                        </div>
+                                        <div class="skill_txt"><p>jQuery</p></div>
+                                    </li>
+                                    <li>
+                                        <div class="skill_svg">
+                                            <img src="./img/ajax_logo.png" alt="ajax_logo">
+                                        </div>
+                                        <div class="skill_txt"><p>AJAX</p></div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="sec3_art1_box2">
+                                <div class="sec3_art1_box2_inner">
+                                    <div class="box2_inner_tit">MORE</div>
+                                    <ul class="ul_skills ul_skills2">
+                                        <li>
+                                            <div class="skill_svg">
+                                                <svg fill="#F05032" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Git</title><path d="M23.546 10.93L13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441.516.515.658 1.258.438 1.9l2.658 2.66c.645-.223 1.387-.078 1.9.435.721.72.721 1.884 0 2.604-.719.719-1.881.719-2.6 0-.539-.541-.674-1.337-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348.713.721.713 1.883 0 2.6-.719.721-1.889.721-2.609 0-.719-.719-.719-1.879 0-2.598.182-.18.387-.316.605-.406V8.835c-.217-.091-.424-.222-.6-.401-.545-.545-.676-1.342-.396-2.009L7.636 3.7.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477c.604.604 1.582.604 2.186 0l10.43-10.43c.605-.603.605-1.582 0-2.187"/></svg>
+                                            </div>
+                                            <div class="skill_txt"><p>Git</p></div>
+                                        </li>
+                                        <li>
+                                            <div class="skill_svg">
+                                                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                                            </div>
+                                            <div class="skill_txt skill_txt_long"><p>GitHub_Projects<br>/ GitHub_flow</p></div>
+                                        </li>
+                                        <li>
+                                            <div class="skill_svg">
+                                                <svg fill="#179287" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitKraken</title><path d="M23.225 6.252a.478.478 0 00-.923.171c0 .053.013.119.026.171 2.15 5.71-.751 12.077-6.46 14.226a10.9 10.9 0 01-2.426.607v-5.155c.33-.066.646-.158.962-.264v4.338c5.445-1.332 8.794-6.817 7.463-12.262a10.147 10.147 0 00-4.958-6.487.472.472 0 00-.646.185.472.472 0 00.185.646c4.443 2.452 6.051 8.056 3.6 12.499a9.13 9.13 0 01-4.681 4.1v-3.836a1.472 1.472 0 001.028-1.398c0-.527-.264-1.002-.725-1.266.343-3.309 1.859-2.439 1.859-3.493v-.62c0-1.582-3.665-6.737-5.38-6.856h-.316c-1.714.119-5.379 5.274-5.379 6.856v.62c0 1.054 1.503.184 1.859 3.493a1.461 1.461 0 00-.725 1.266c0 .646.422 1.2 1.028 1.398v3.836C3.91 17.168 1.59 11.83 3.448 7.11a9.24 9.24 0 014.1-4.68.479.479 0 00.185-.66.487.487 0 00-.422-.237.444.444 0 00-.224.065 10.142 10.142 0 00-3.982 13.791 10.147 10.147 0 006.487 4.958V16.02c.316.106.633.198.962.264v5.155C4.503 20.636.257 15.085 1.062 9.034a10.9 10.9 0 01.606-2.426.489.489 0 00-.277-.62.494.494 0 00-.62.277c-2.333 6.21.805 13.131 7.015 15.452 1.2.448 2.452.699 3.73.751v-6.09c.172.012.489.012.489.012s.316 0 .488-.013v6.078c6.631-.277 11.773-5.867 11.496-12.499a12.458 12.458 0 00-.764-3.704zm-9.019 6.842a.995.995 0 011.398 0 .995.995 0 010 1.398.995.995 0 01-1.398 0 .988.988 0 010-1.398zm-4.43 1.398a.979.979 0 01-1.384 0 .995.995 0 010-1.398.995.995 0 011.398 0 .983.983 0 01-.013 1.398z"/></svg>
+                                            </div>
+                                            <div class="skill_txt skill_txt_long"><p>GitKraken<br>(Git GUI)</p></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="sec3_bar"></div>
+                                <div class="sec3_art1_box2_inner">
+                                    <div class="box2_inner_tit">Now Studying</div>
+                                    <ul class="ul_skills ul_skills2">
+                                        <li>
+                                            <div class="skill_svg">
+                                                <img src="./img/jpa_logo.png" alt="">
+                                            </div>
+                                            <div class="skill_txt"><p>JPA</p></div>
+                                        </li>
+                                        <li>
+                                            <div class="skill_svg">
+                                                <svg fill="#005F0F" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Thymeleaf</title><path d="M1.727 0C.782 0 .02.761.02 1.707v20.586C.02 23.24.782 24 1.727 24h20.546c.945 0 1.707-.761 1.707-1.707V1.707C23.98.76 23.218 0 22.273 0H1.727zm18.714 3.273c-1.861 3.694-3.3 7.627-5.674 11.046-1.064 1.574-2.329 3.163-4.16 3.86-1.31.552-2.936.337-3.98-.647-.628-.523-.54-1.43-.173-2.075.96-1.224 2.34-2.02 3.59-2.915 3.842-2.625 7.446-5.654 10.397-9.27zm-1.693 1.25c-2.503 2.751-5.381 5.16-8.452 7.269l-.003.002-.003.003c-1.327.979-2.835 1.824-3.993 3.114-.349.333-.583 1.042-.537 1.481-.622-1.043-.8-2.614-.257-3.74.526-1.19 1.742-1.807 2.876-2.292 3.757-1.353 6.695-2.926 10.369-5.836z"/></svg>
+                                            </div>
+                                            <div class="skill_txt"><p>Thymeleaf</p></div>
+                                        </li>
+                                        <li>
+                                            <div class="skill_svg">
+                                                <svg fill="#6DB33F" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Spring Security</title><path d="M20.59 2.066 11.993 0 3.41 2.066v6.612h4.557a3.804 3.804 0 0 0 0 .954H3.41v3.106C3.41 19.867 11.994 24 11.994 24s8.582-4.133 8.582-11.258V9.635h-4.545a3.616 3.616 0 0 0 0-.954h4.558zM12 12.262h-.006a3.109 3.109 0 1 1 .006 0zm-.006-4.579a.804.804 0 0 0-.37 1.52v.208l.238.237v.159l.159.159v.159l-.14.14.15.246v.159l-.16.189.223.222.246-.246V9.218a.804.804 0 0 0-.346-1.535zm0 .836a.299.299 0 1 1 .298-.299.299.299 0 0 1-.298.3z"/></svg>
+                                            </div>
+                                            <div class="skill_txt"><p>Spring<br>Security</p></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </article>
                 </section>
                 <section id="section4" class="sections">
-                    <div class="sec_title">
-                        PROJECTS
-                    </div>
-                    <article class="articles">
+                    <article class="articles sec4_arts sec4_art1">
+                        <div class="art_title">
+                            PROJECTS
+                        </div>
+                        <div class="sec4_art1_content">
 
+                        </div>
                     </article>
+                    <!-- <article class="articles sec4_arts sec4_art2">
+                        <div class="art_title">
+                            PROJECTS
+                        </div>
+                        <div class="sec4_art1_content">
+
+                        </div>
+                    </article> -->
                 </section>
                 <section id="section5" class="sections">
-                    <div class="sec_title">
-                        CONTACT
-                    </div>
-                    <article class="articles article_last">
-                        <div class="sec5_1">
-                            <div class="contact_boxs">
-                                <div class="contact_icon">
-                                    <a href="https://mail.google.com/mail/u/0/?fs=1&to=tpgusol@naver.com&tf=cm" target="_blank">
-                                        <svg width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13.025 17H3.707l5.963-5.963L12 12.83l2.33-1.794 1.603 1.603a5.463 5.463 0 0 1 1.004-.41l-1.808-1.808L21 5.9v6.72a5.514 5.514 0 0 1 1 .64V5.5A1.504 1.504 0 0 0 20.5 4h-17A1.504 1.504 0 0 0 2 5.5v11A1.5 1.5 0 0 0 3.5 18h9.525c-.015-.165-.025-.331-.025-.5s.01-.335.025-.5zM3 16.293V5.901l5.871 4.52zM20.5 5c.009 0 .016.005.025.005L12 11.57 3.475 5.005c.009 0 .016-.005.025-.005zm-2 8a4.505 4.505 0 0 0-4.5 4.5 4.403 4.403 0 0 0 .05.5 4.49 4.49 0 0 0 4.45 4h.5v-1h-.5a3.495 3.495 0 0 1-3.45-3 3.455 3.455 0 0 1-.05-.5 3.498 3.498 0 0 1 5.947-2.5H20v.513A2.476 2.476 0 0 0 18.5 15a2.5 2.5 0 1 0 1.733 4.295A1.497 1.497 0 0 0 23 18.5v-1a4.555 4.555 0 0 0-4.5-4.5zm0 6a1.498 1.498 0 0 1-1.408-1 1.483 1.483 0 0 1-.092-.5 1.5 1.5 0 0 1 3 0 1.483 1.483 0 0 1-.092.5 1.498 1.498 0 0 1-1.408 1zm3.5-.5a.5.5 0 0 1-1 0v-3.447a3.639 3.639 0 0 1 1 2.447z"/><path fill="none" d="M0 0h24v24H0z"/></svg>
-                                    </a>
-                                </div>
-                                <div class="contact_desc">
-                                    tpgusol@naver.com
-                                </div>
-                            </div>
-                            <div class="contact_boxs">
-                                <div class="contact_icon">
-                                    <a href="https://github.com/DevToddler" target="_blank">
-                                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                                    </a>
-                                </div>
-                                <div class="contact_desc">
-                                    <a href="https://github.com/DevToddler" target="_blank">GitHub</a>
-                                </div>
-                            </div>
-                            <div class="contact_boxs">
-                                <div class="contact_icon">
-                                    <a href="https://open.kakao.com/o/ssD4Ye2e" target="_blank">
-                                        <img src="./img/kakao_QR.jpg" alt="kakao_openchat_QR">
-                                    </a>
-                                </div>
-                                <div class="contact_desc">
-                                    <a href="https://open.kakao.com/o/ssD4Ye2e" target="_blank">kakao 오픈채팅</a> 
-                                </div>
-                            </div>
-                            <div class="contact_boxs">
-                                <div class="contact_icon">
-                                    <a href="https://drive.google.com/drive/u/0/folders/1lamo-tH2aGqfYktqYVBJAXu9ykLFc3g_" target="_blank">
-                                        <svg fill="#000000" viewBox="0 0 846.66 846.66" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <defs> <style type="text/css">  .fil0 {fill:black;fill-rule:nonzero}  </style> </defs> <g id="Layer_x0020_1"> <path class="fil0" d="M539.75 794.68c27.15,0 27.15,41.29 0,41.29l-497.47 0c-11.4,0 -20.64,-9.25 -20.64,-20.65l0 -621.69c0,-5.7 2.31,-10.87 6.04,-14.6l162.3 -162.29c4.03,-4.03 9.31,-6.05 14.59,-6.05l466.89 0c11.4,0 20.65,9.25 20.65,20.65l0 361.36c0,27.16 -41.29,27.16 -41.29,0l0 -340.72 -437.7 0 -150.19 150.2 0 592.5 476.82 0zm-351.21 -181.98c-27.16,0 -27.16,-41.29 0,-41.29l306.67 0c27.16,0 27.16,41.29 0,41.29l-306.67 0zm0 -274.68c-27.16,0 -27.16,-41.29 0,-41.29l306.67 0c27.16,0 27.16,41.29 0,41.29l-306.67 0zm0 91.56c-27.16,0 -27.16,-41.29 0,-41.29l306.67 0c27.16,0 27.16,41.29 0,41.29l-306.67 0zm0 91.56c-27.16,0 -27.16,-41.29 0,-41.29l306.67 0c27.16,0 27.16,41.29 0,41.29l-306.67 0zm0 -274.68c-27.16,0 -27.16,-41.29 0,-41.29l306.67 0c27.16,0 27.16,41.29 0,41.29l-306.67 0zm496.57 238.25c49.84,0 90.24,40.4 90.24,90.24 0,18.1 -5.33,34.95 -14.5,49.07 37.57,24.93 61.47,66.08 64.13,111.2 1.59,27.06 -39.55,29.47 -41.13,2.42 -2.11,-35.69 -22.61,-67.48 -54.13,-84.24 -13.16,7.5 -28.38,11.78 -44.61,11.78 -17.56,0 -33.95,-5.01 -47.81,-13.69 -33.44,16.12 -55.6,49.04 -57.79,86.15 -1.59,27.05 -42.72,24.64 -41.13,-2.42 2.79,-47.18 28.75,-89.88 69.08,-114.28 -7.99,-13.47 -12.58,-29.19 -12.58,-45.99 0,-49.83 40.4,-90.24 90.23,-90.24zm0 41.29c-27.03,0 -48.94,21.92 -48.94,48.95 0,27.03 21.91,48.94 48.94,48.94 27.03,0 48.95,-21.91 48.95,-48.94 0,-27.03 -21.91,-48.95 -48.95,-48.95z"></path> </g> </g></svg>
-                                    </a>
-                                </div>
-                                <div class="contact_desc">
-                                    <a href="https://drive.google.com/drive/u/0/folders/1lamo-tH2aGqfYktqYVBJAXu9ykLFc3g_" target="_blank">Resume</a>
-                                </div>
-                            </div>
+                    <article class="articles sec5_art1">
+                        <div class="art_title">
+                            CONTACT
                         </div>
-                        <div class="sec5_2">
-
+                        <div class="sec5_art1_content">
+                            <div class="sec5_art1_box1">
+                                <div class="contact_boxs">
+                                    <div class="contact_icon">
+                                        <a href="https://mail.google.com/mail/u/0/?fs=1&to=tpgusol@naver.com&tf=cm" target="_blank">
+                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M13.025 17H3.707l5.963-5.963L12 12.83l2.33-1.794 1.603 1.603a5.463 5.463 0 0 1 1.004-.41l-1.808-1.808L21 5.9v6.72a5.514 5.514 0 0 1 1 .64V5.5A1.504 1.504 0 0 0 20.5 4h-17A1.504 1.504 0 0 0 2 5.5v11A1.5 1.5 0 0 0 3.5 18h9.525c-.015-.165-.025-.331-.025-.5s.01-.335.025-.5zM3 16.293V5.901l5.871 4.52zM20.5 5c.009 0 .016.005.025.005L12 11.57 3.475 5.005c.009 0 .016-.005.025-.005zm-2 8a4.505 4.505 0 0 0-4.5 4.5 4.403 4.403 0 0 0 .05.5 4.49 4.49 0 0 0 4.45 4h.5v-1h-.5a3.495 3.495 0 0 1-3.45-3 3.455 3.455 0 0 1-.05-.5 3.498 3.498 0 0 1 5.947-2.5H20v.513A2.476 2.476 0 0 0 18.5 15a2.5 2.5 0 1 0 1.733 4.295A1.497 1.497 0 0 0 23 18.5v-1a4.555 4.555 0 0 0-4.5-4.5zm0 6a1.498 1.498 0 0 1-1.408-1 1.483 1.483 0 0 1-.092-.5 1.5 1.5 0 0 1 3 0 1.483 1.483 0 0 1-.092.5 1.498 1.498 0 0 1-1.408 1zm3.5-.5a.5.5 0 0 1-1 0v-3.447a3.639 3.639 0 0 1 1 2.447z"></path><path fill="none" d="M0 0h24v24H0z"></path></g></svg>
+                                        </a>
+                                    </div>
+                                    <div class="contact_desc">
+                                        tpgusol@naver.com
+                                    </div>
+                                </div>
+                                <div class="contact_boxs">
+                                    <div class="contact_icon">
+                                        <a href="https://github.com/DevToddler" target="_blank">
+                                            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                                        </a>
+                                    </div>
+                                    <div class="contact_desc">
+                                        <a href="https://github.com/DevToddler" target="_blank">GitHub</a>
+                                    </div>
+                                </div>
+                                <div class="contact_boxs">
+                                    <div class="contact_icon">
+                                        <a href="https://open.kakao.com/o/ssD4Ye2e" target="_blank">
+                                            <img src="./img/kakao_QR.jpg" alt="kakao_openchat_QR">
+                                        </a>
+                                    </div>
+                                    <div class="contact_desc">
+                                        <a href="https://open.kakao.com/o/ssD4Ye2e" target="_blank">kakao 오픈채팅</a> 
+                                    </div>
+                                </div>
+                                <div class="contact_boxs">
+                                    <div class="contact_icon">
+                                        <a href="https://drive.google.com/drive/u/0/folders/1lamo-tH2aGqfYktqYVBJAXu9ykLFc3g_" target="_blank">
+                                            <svg fill="#000000" viewBox="0 0 846.66 846.66" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <defs> <style type="text/css">  .fil0 {fill:black;fill-rule:nonzero}  </style> </defs> <g id="Layer_x0020_1"> <path class="fil0" d="M539.75 794.68c27.15,0 27.15,41.29 0,41.29l-497.47 0c-11.4,0 -20.64,-9.25 -20.64,-20.65l0 -621.69c0,-5.7 2.31,-10.87 6.04,-14.6l162.3 -162.29c4.03,-4.03 9.31,-6.05 14.59,-6.05l466.89 0c11.4,0 20.65,9.25 20.65,20.65l0 361.36c0,27.16 -41.29,27.16 -41.29,0l0 -340.72 -437.7 0 -150.19 150.2 0 592.5 476.82 0zm-351.21 -181.98c-27.16,0 -27.16,-41.29 0,-41.29l306.67 0c27.16,0 27.16,41.29 0,41.29l-306.67 0zm0 -274.68c-27.16,0 -27.16,-41.29 0,-41.29l306.67 0c27.16,0 27.16,41.29 0,41.29l-306.67 0zm0 91.56c-27.16,0 -27.16,-41.29 0,-41.29l306.67 0c27.16,0 27.16,41.29 0,41.29l-306.67 0zm0 91.56c-27.16,0 -27.16,-41.29 0,-41.29l306.67 0c27.16,0 27.16,41.29 0,41.29l-306.67 0zm0 -274.68c-27.16,0 -27.16,-41.29 0,-41.29l306.67 0c27.16,0 27.16,41.29 0,41.29l-306.67 0zm496.57 238.25c49.84,0 90.24,40.4 90.24,90.24 0,18.1 -5.33,34.95 -14.5,49.07 37.57,24.93 61.47,66.08 64.13,111.2 1.59,27.06 -39.55,29.47 -41.13,2.42 -2.11,-35.69 -22.61,-67.48 -54.13,-84.24 -13.16,7.5 -28.38,11.78 -44.61,11.78 -17.56,0 -33.95,-5.01 -47.81,-13.69 -33.44,16.12 -55.6,49.04 -57.79,86.15 -1.59,27.05 -42.72,24.64 -41.13,-2.42 2.79,-47.18 28.75,-89.88 69.08,-114.28 -7.99,-13.47 -12.58,-29.19 -12.58,-45.99 0,-49.83 40.4,-90.24 90.23,-90.24zm0 41.29c-27.03,0 -48.94,21.92 -48.94,48.95 0,27.03 21.91,48.94 48.94,48.94 27.03,0 48.95,-21.91 48.95,-48.94 0,-27.03 -21.91,-48.95 -48.95,-48.95z"></path> </g> </g></svg>
+                                        </a>
+                                    </div>
+                                    <div class="contact_desc">
+                                        <a href="https://drive.google.com/drive/u/0/folders/1lamo-tH2aGqfYktqYVBJAXu9ykLFc3g_" target="_blank">Resume</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="thankyou_msg">
+                                끝까지 봐주셔서 감사합니다!
+                            </div>
                         </div>
                     </article>
                 </section>
