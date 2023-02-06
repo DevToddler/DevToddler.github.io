@@ -18,6 +18,7 @@
             width: 80%;
             margin: 0 auto;
             max-width: 1200px;
+            min-width: 1000px;
         }
         .sections{
             width: 100%;
@@ -26,6 +27,7 @@
             position: relative;
             width: 100%;
             height: 100vh;
+            min-height: 760px;
             padding: 18vh 3% 10vh 3%;
             box-sizing: border-box;
         }
@@ -79,7 +81,6 @@
             right: 0%;
             margin: 0 auto;
             font-size: 28px;
-            font-family: 'Nanum Gothic', sans-serif;
             font-weight: 600;
             text-align: right;
             color: rgb(9, 84, 113);
@@ -89,11 +90,13 @@
             padding: 1vh;
         }
         .sec2_art1_box2{
-            width: 55%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 60%;
             height: 70%;
             /* margin: 0 auto; */
             font-size: 19px;
-            font-family: 'NanumSquareRound';
         }
         .box2_p_last{
             font-size: 14px;
@@ -255,8 +258,62 @@
         /* section4 ****************************************************/
         /* section4 article1 */
         .sec4_art1_content{
+            width: 100%;
+            height: 100%;
 
         }
+        .sec4_arts .art_title{
+            display: flex;
+            align-items: center;
+        }
+        .art_title_sub{
+            font-size: 22px;
+            color: rgb(9, 84, 113);
+            /* color: #ffcd07; */
+        }
+        .proj_l_box{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            
+            width: 40%;
+            height: 100%;
+        }
+        .proj_l_box > .proj_img{
+            width: 100%;
+        }
+        .proj_img img{
+            width: 100%;
+        }
+        .proj_btn_box{
+            display: flex;
+            justify-content: space-evenly;
+            
+        }
+        .proj_btn{
+            height: 40px;
+            padding: 0 15px;
+            border-radius: 20px;
+            border: none;
+            background-color: #ffcd07;
+            cursor: pointer;
+            font-family: 'NanumSquareRound';
+
+        }
+        .proj_btn:hover{
+            transition: 0.3s all;
+            background-color: inherit;
+            background-color: rgb(9, 84, 113);
+            color: lightgray;
+        }
+        
+
+
+        .proj_r_box{
+            width: 60%;
+            height: 100%;
+        }
+
         /* section4 article2 */
 
 
@@ -387,7 +444,7 @@
                                 <p>내가 현재 적용하려는 기술을 왜 쓰는지? 어떻게 써야 옳게 쓰는 것인지? 단점으로는 어떤 점이 있는지? 다른 해결방법은 없는지? 있지만 덜 쓰인다면 이유가 무엇인지?</p>
                                 <p>궁금한 것이 너무 많아 가끔 지치기도 하지만 끈질긴 연구 끝에 결국 답을 찾아내는 즐거움에 또다시 질문을 던지며 재밌고 행복하게 성장하고 있습니다.</p>
                                 <p>앞으로도 올바른 방향으로 가기위해 끊임없이 고민하는 개발자일 것임을 스스로 다짐합니다.</p>
-                                <p class="box2_p_last">(.....현재는 JPA를 이용하여 스프링 웹 레이어를 객체 지향적으로 설계하는 RESTful 한 게시판 프로젝트를 기획하고 있습니다.)</p>
+                                <!-- <p class="box2_p_last">(현재는 JPA를 이용하여 스프링 웹 레이어를 객체 지향적으로 설계하는 RESTful 한 게시판 프로젝트를 기획하고 있습니다.)</p> -->
                             </div>
                             <div class="sec2_art1_box3">
                                 <div class="sec2_art1_box3_inner">
@@ -512,6 +569,12 @@
                                         </div>
                                         <div class="skill_txt"><p>AJAX</p></div>
                                     </li>
+                                    <li>
+                                        <div class="skill_svg">
+                                            <svg fill="#005F0F" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Thymeleaf</title><path d="M1.727 0C.782 0 .02.761.02 1.707v20.586C.02 23.24.782 24 1.727 24h20.546c.945 0 1.707-.761 1.707-1.707V1.707C23.98.76 23.218 0 22.273 0H1.727zm18.714 3.273c-1.861 3.694-3.3 7.627-5.674 11.046-1.064 1.574-2.329 3.163-4.16 3.86-1.31.552-2.936.337-3.98-.647-.628-.523-.54-1.43-.173-2.075.96-1.224 2.34-2.02 3.59-2.915 3.842-2.625 7.446-5.654 10.397-9.27zm-1.693 1.25c-2.503 2.751-5.381 5.16-8.452 7.269l-.003.002-.003.003c-1.327.979-2.835 1.824-3.993 3.114-.349.333-.583 1.042-.537 1.481-.622-1.043-.8-2.614-.257-3.74.526-1.19 1.742-1.807 2.876-2.292 3.757-1.353 6.695-2.926 10.369-5.836z"/></svg>
+                                        </div>
+                                        <div class="skill_txt"><p>Thymeleaf</p></div>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="sec3_art1_box2">
@@ -548,12 +611,7 @@
                                             </div>
                                             <div class="skill_txt"><p>JPA</p></div>
                                         </li>
-                                        <li>
-                                            <div class="skill_svg">
-                                                <svg fill="#005F0F" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Thymeleaf</title><path d="M1.727 0C.782 0 .02.761.02 1.707v20.586C.02 23.24.782 24 1.727 24h20.546c.945 0 1.707-.761 1.707-1.707V1.707C23.98.76 23.218 0 22.273 0H1.727zm18.714 3.273c-1.861 3.694-3.3 7.627-5.674 11.046-1.064 1.574-2.329 3.163-4.16 3.86-1.31.552-2.936.337-3.98-.647-.628-.523-.54-1.43-.173-2.075.96-1.224 2.34-2.02 3.59-2.915 3.842-2.625 7.446-5.654 10.397-9.27zm-1.693 1.25c-2.503 2.751-5.381 5.16-8.452 7.269l-.003.002-.003.003c-1.327.979-2.835 1.824-3.993 3.114-.349.333-.583 1.042-.537 1.481-.622-1.043-.8-2.614-.257-3.74.526-1.19 1.742-1.807 2.876-2.292 3.757-1.353 6.695-2.926 10.369-5.836z"/></svg>
-                                            </div>
-                                            <div class="skill_txt"><p>Thymeleaf</p></div>
-                                        </li>
+                                        
                                         <li>
                                             <div class="skill_svg">
                                                 <svg fill="#6DB33F" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Spring Security</title><path d="M20.59 2.066 11.993 0 3.41 2.066v6.612h4.557a3.804 3.804 0 0 0 0 .954H3.41v3.106C3.41 19.867 11.994 24 11.994 24s8.582-4.133 8.582-11.258V9.635h-4.545a3.616 3.616 0 0 0 0-.954h4.558zM12 12.262h-.006a3.109 3.109 0 1 1 .006 0zm-.006-4.579a.804.804 0 0 0-.37 1.52v.208l.238.237v.159l.159.159v.159l-.14.14.15.246v.159l-.16.189.223.222.246-.246V9.218a.804.804 0 0 0-.346-1.535zm0 .836a.299.299 0 1 1 .298-.299.299.299 0 0 1-.298.3z"/></svg>
@@ -569,10 +627,25 @@
                 <section id="section4" class="sections">
                     <article class="articles sec4_arts sec4_art1">
                         <div class="art_title">
-                            PROJECTS
+                            PROJECTS&nbsp;-&nbsp;&nbsp;<span class="art_title_sub"> 1) ARTon_ver1</span>
                         </div>
                         <div class="sec4_art1_content">
+                            <div class="proj_l_box">
+                                <div class="proj_img">
+                                    <p>#화면예시 1</p>
+                                    <img src="./img/arton_ver1_1.jpg" alt="">
+                                </div>
+                                <div class="proj_img">
+                                    <p>#화면예시 2</p>
+                                    <img src="./img/arton_ver1_2.jpg" alt="">
+                                </div>
+                                <div class="proj_btn_box">
+                                    <button class="proj_btn" onclick="window.open('https://github.com/DevToddler/arton_ver1')">코드 보러가기</button>
+                                </div>
+                            </div>
+                            <div class="proj_r_box">
 
+                            </div>
                         </div>
                     </article>
                     <!-- <article class="articles sec4_arts sec4_art2">
