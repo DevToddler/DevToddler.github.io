@@ -150,7 +150,6 @@
             display: flex;
             align-items: center;
         }
-        
         .ul_skills{
             display: flex;
             flex-direction: row;
@@ -257,7 +256,7 @@
 
         /* section4 ****************************************************/
         /* section4 article1 */
-        .sec4_art1_content{
+        .sec4_art_format{
             width: 100%;
             height: 100%;
             display: flex;
@@ -281,11 +280,18 @@
             width: 40%;
             height: 100%;
         }
-        .proj_l_box > .proj_img{
+        .proj_l_box p{
+            margin: 0;
+            padding-top: 16px;
+        }
+        .proj_img{
             width: 100%;
+            border-radius: 5px;
+            overflow: hidden;
+            text-align: center;
         }
         .proj_img img{
-            width: 100%;
+            width: 90%;
         }
         .proj_btn_box{
             display: flex;
@@ -304,17 +310,35 @@
         }
         .proj_btn:hover{
             transition: 0.3s all;
-            background-color: inherit;
             background-color: rgb(9, 84, 113);
-            color: lightgray;
+            color: white;
         }
         
 
 
         .proj_r_box{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 2.5%;
+            box-sizing: border-box;
             width: 60%;
             height: 100%;
-            text-align: center;
+            /* text-align: center; */
+        }
+        .proj_tit{
+            font-size: 19px;
+            font-weight: 900;
+            margin: 0;
+            margin-bottom: 5px;
+            color: rgb(9, 84, 113);
+        }
+        .proj_desc{
+            font-size: 15px;
+            margin: 0;
+            margin-bottom: 20px;
+            /* line-height: 20px; */
+            color: rgb(70, 70, 70);
         }
 
         /* section4 article2 */
@@ -400,7 +424,14 @@
                 <li class="h_menu_li"><a href="#wrap">Home</a></li class="h_menu_li">
                 <li class="h_menu_li"><a href="#section2">Profile</a></li class="h_menu_li">
                 <li class="h_menu_li"><a href="#section3">Skills</a></li class="h_menu_li">
-                <li class="h_menu_li"><a href="#section4">Projects</a></li class="h_menu_li">
+                <li class="h_menu_li h_menu_li_proj">
+                    <a href="#section4">Projects</a>
+                    <div class="h_li_proj">
+                        <div class="h_menu_li"><a href="#section4">Project_1</a></div>
+                        <div class="h_menu_li"><a href="#section4_2">Project_2</a></div>
+                    </div>
+                    <!-- <div class="h_menu_li">Proj_3</div> -->
+                </li class="h_menu_li">
                 <li class="h_menu_li"><a href="#section5">Contact</a></li class="h_menu_li">
             </ul>
         </header>
@@ -476,16 +507,6 @@
                                         회사와 가까운 새 보금자리<br>(현재 - 서울시 관악구)
                                     </div>
                                 </div>
-                                <!-- <div class="sec2_art1_box2_1">
-                                    <div class="box2_1_inner">이 름</div>
-                                    <div class="box2_1_inner">마인드 셋</div>
-                                    <div class="box2_1_inner">주 소</div>
-                                </div>
-                                <div class="sec2_art1_box2_2">
-                                    <div class="box2_2_inner"><span></span>최세현</div>
-                                    <div class="box2_2_inner"><span></span>책임, 배려, 주체적 행동</div>
-                                    <div class="box2_2_inner"><span></span>회사와 가까운 새 보금자리 (현재 서울시 관악구)</div>
-                                </div> -->
                             </div>
                             
                         </div>
@@ -625,14 +646,14 @@
                         <div class="art_title">
                             PROJECTS&nbsp;-&nbsp;&nbsp;<span class="art_title_sub"> 1) ARTon_ver1</span>
                         </div>
-                        <div class="sec4_art1_content">
+                        <div class="sec4_art_format sec4_art1_content">
                             <div class="proj_l_box">
+                                <p>#화면 예 1</p>
                                 <div class="proj_img">
-                                    <p>#화면예시 1</p>
                                     <img src="./img/arton_ver1_1.jpg" alt="">
                                 </div>
+                                <p>#화면 예 2</p>
                                 <div class="proj_img">
-                                    <p>#화면예시 2</p>
                                     <img src="./img/arton_ver1_2.jpg" alt="">
                                 </div>
                                 <div class="proj_btn_box">
@@ -640,30 +661,68 @@
                                 </div>
                             </div>
                             <div class="proj_r_box">
-                                작성중입니다.
+                                <p class="proj_tit">소개</p>
+                                <p class="proj_desc proj_desc_last">각종 공연의 티켓 예매가 가능한 사이트</p>
+                                <p class="proj_tit">기간</p>
+                                <p class="proj_desc proj_desc_last">2022.11.29 ~ 2022.12.11 (13일)</p>
+                                <p class="proj_tit">기여도</p>
+                                <p class="proj_desc proj_desc_last">25% (5명, 팀 프로젝트)</p>
+                                <p class="proj_tit">담당 작업</p>
+                                <p class="proj_desc proj_desc_last">DB 설계, 쿼리 작성, Mapper, Dao, Service(20%), Controller(50%), 데이터 크롤링 및 가데이터 생성</p>
+                                <p class="proj_tit">사용 기술</p>
+                                <p class="proj_desc proj_desc_last">Java, Spring, MySQL, Mybatis, jstl, AJAX, JavaScript, jQuery (직접 사용한 기술만 기재)</p>
+                                <p class="proj_tit">기능 구현</p>
+                                <p class="proj_desc proj_desc_last">공연 예매, 로그인, 회원가입, 마이페이지, 기간별 랭킹, 회원정보수정</p>
+                                <p class="proj_tit">피드백</p>
+                                <p class="proj_desc">
+                                    - 첫 프로젝트라 난관이 많았지만 정해진 기능까지는 어떻게든 구현해냈다.<br>
+                                    - Use case 를 완벽하게 설계해두어야 코드 작업이 수월하다는 것을 느꼈다.<br>
+                                    - 다른 사람이 보더라도 쉽게 알아볼수 있게 코드를 리팩토링 해보고 싶다.<br>
+                                    - 어떻게든 구현만 되도록 작성한 코드를 효율적으로 리팩토링 해보고 싶다.<br>
+                                    - Dto 사용 범위에 대해 고민해보았다.<br>
+                                    - Service 레이어의 필요성 및 기능 범위에 대해 고민해보았다.
+                                </p>
                             </div>
                         </div>
                     </article>
-                    <article class="articles sec4_arts sec4_art2">
+                    <article id="section4_2" class="articles sec4_arts sec4_art2">
                         <div class="art_title">
-                            PROJECTS&nbsp;-&nbsp;&nbsp;<span class="art_title_sub"> 1) ARTon_ver2</span>
+                            PROJECTS&nbsp;-&nbsp;&nbsp;<span class="art_title_sub"> 2) ARTon_ver2</span>
                         </div>
-                        <div class="sec4_art2_content">
+                        <div class="sec4_art_format sec4_art2_content">
                             <div class="proj_l_box">
+                                <p>#화면 예 1</p>
                                 <div class="proj_img">
-                                    <!-- <p>#화면예시 1</p> -->
-                                    <!-- <img src="./img/arton_ver1_1.jpg" alt=""> -->
+                                    <img src="./img/arton_ver1_1.jpg" alt="">
                                 </div>
+                                <p>#화면 예 2</p>
                                 <div class="proj_img">
-                                    <!-- <p>#화면예시 2</p> -->
-                                    <!-- <img src="./img/arton_ver1_2.jpg" alt=""> -->
+                                    <img src="./img/arton_ver1_2.jpg" alt="">
                                 </div>
                                 <div class="proj_btn_box">
-                                    <!-- <button class="proj_btn" onclick="window.open('https://github.com/DevToddler/arton_ver1')">코드 보러가기</button> -->
+                                    <button class="proj_btn" onclick="window.open('https://github.com/DevToddler/arton_ver2')">코드 보러가기</button>
                                 </div>
                             </div>
                             <div class="proj_r_box">
-                                작성중입니다.
+                                <p class="proj_tit">소개</p>
+                                <p class="proj_desc proj_desc_last">arton의 리팩토링 버전</p>
+                                <p class="proj_tit">기간</p>
+                                <p class="proj_desc proj_desc_last">수업 및 복습 외의 시간 틈틈이 작업</p>
+                                <p class="proj_tit">기여도</p>
+                                <p class="proj_desc proj_desc_last">백엔드 100%</p>
+                                <p class="proj_tit">담당 작업</p>
+                                <p class="proj_desc proj_desc_last">백엔드 100%</p>
+                                <p class="proj_tit">사용 기술</p>
+                                <p class="proj_desc proj_desc_last">Java, Spring, MySQL, Mybatis, jstl, AJAX, JavaScript, jQuery</p>
+                                <p class="proj_tit">기능 구현</p>
+                                <p class="proj_desc proj_desc_last">공연 예매, 로그인, 회원가입, 마이페이지, 기간별 랭킹, 회원정보수정</p>
+                                <p class="proj_tit">피드백</p>
+                                <p class="proj_desc">
+                                    - 전체적인 코드 가독성 개선 및 효율적인 코드로 재작성.<br>
+                                    - 예매 기능을 올바르게 개선.<br>
+                                    - 어떻게 하면 @Transactional 의 롤백 처리 시에 AJAX 쪽에도 실패 내용을 전달할 수 있을까?<br>
+                                    - JPA에서 레이어 별로 Dto를 Controller(request/response), Service(Dto), Repository(Entity) 와 같이 구성하는 형태가 매력적으로 보인다. 다음 프로젝트에 적용해보자.
+                                </p>
                             </div>
                         </div>
                     </article>

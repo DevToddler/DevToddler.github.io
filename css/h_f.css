@@ -60,4 +60,19 @@ a { text-decoration: none; color: inherit;}
 }
 .h_menu_li{
     padding: 0 10px;
+    position: relative;
+    height: 4vh;
+    line-height: 4vh;
+}
+.h_li_proj{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+}
+.h_menu_li_proj:hover .h_li_proj, .h_li_proj:hover, .h_li_proj>.h_menu_li:hover{
+    display: flex;
 }
