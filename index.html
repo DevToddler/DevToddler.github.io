@@ -340,6 +340,12 @@
             /* line-height: 20px; */
             color: rgb(70, 70, 70);
         }
+        code{
+            background-color: rgb(220, 220, 220);
+            padding: 3px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
 
         /* section4 article2 */
 
@@ -668,19 +674,19 @@
                                 <p class="proj_tit">기여도</p>
                                 <p class="proj_desc proj_desc_last">25% (5명, 팀 프로젝트)</p>
                                 <p class="proj_tit">담당 작업</p>
-                                <p class="proj_desc proj_desc_last">DB 설계, 쿼리 작성, Mapper, Dao, Service(20%), Controller(50%), 데이터 크롤링 및 가데이터 생성</p>
+                                <p class="proj_desc proj_desc_last">DB 설계,&nbsp; 쿼리 작성,&nbsp; Mapper,&nbsp; Dao,&nbsp; Service(20%),&nbsp; Controller(50%),&nbsp; 데이터 크롤링 및 가데이터 생성</p>
                                 <p class="proj_tit">사용 기술</p>
-                                <p class="proj_desc proj_desc_last">Java, Spring, MySQL, Mybatis, jstl, AJAX, JavaScript, jQuery (직접 사용한 기술만 기재)</p>
+                                <p class="proj_desc proj_desc_last">Java,&nbsp; Spring,&nbsp; MySQL,&nbsp; Mybatis,&nbsp; jstl,&nbsp; AJAX,&nbsp; JavaScript,&nbsp; jQuery (직접 사용한 기술만 기재)</p>
                                 <p class="proj_tit">기능 구현</p>
-                                <p class="proj_desc proj_desc_last">공연 예매, 로그인, 회원가입, 마이페이지, 기간별 랭킹, 회원정보수정</p>
-                                <p class="proj_tit">피드백</p>
+                                <p class="proj_desc proj_desc_last">공연 예매,&nbsp; 로그인,&nbsp; 회원가입,&nbsp; 마이페이지,&nbsp; 기간별 랭킹,&nbsp; 회원정보수정</p>
+                                <p class="proj_tit">느낀점 & 피드백</p>
                                 <p class="proj_desc">
                                     - 첫 프로젝트라 난관이 많았지만 정해진 기능까지는 어떻게든 구현해냈다.<br>
                                     - Use case 를 완벽하게 설계해두어야 코드 작업이 수월하다는 것을 느꼈다.<br>
                                     - 다른 사람이 보더라도 쉽게 알아볼수 있게 코드를 리팩토링 해보고 싶다.<br>
                                     - 어떻게든 구현만 되도록 작성한 코드를 효율적으로 리팩토링 해보고 싶다.<br>
                                     - Dto 사용 범위에 대해 고민해보았다.<br>
-                                    - Service 레이어의 필요성 및 기능 범위에 대해 고민해보았다.
+                                    - Service 레이어의 필요성 및 기능 범위에 대해 고민해보았다.<br>
                                 </p>
                             </div>
                         </div>
@@ -708,20 +714,21 @@
                                 <p class="proj_desc proj_desc_last">arton의 리팩토링 버전</p>
                                 <p class="proj_tit">기간</p>
                                 <p class="proj_desc proj_desc_last">수업 및 복습 외의 시간 틈틈이 작업</p>
-                                <p class="proj_tit">기여도</p>
-                                <p class="proj_desc proj_desc_last">백엔드 100%</p>
                                 <p class="proj_tit">담당 작업</p>
                                 <p class="proj_desc proj_desc_last">백엔드 100%</p>
                                 <p class="proj_tit">사용 기술</p>
-                                <p class="proj_desc proj_desc_last">Java, Spring, MySQL, Mybatis, jstl, AJAX, JavaScript, jQuery</p>
-                                <p class="proj_tit">기능 구현</p>
-                                <p class="proj_desc proj_desc_last">공연 예매, 로그인, 회원가입, 마이페이지, 기간별 랭킹, 회원정보수정</p>
-                                <p class="proj_tit">피드백</p>
-                                <p class="proj_desc">
+                                <p class="proj_desc proj_desc_last">Java,&nbsp; Spring,&nbsp; MySQL,&nbsp; Mybatis,&nbsp; jstl,&nbsp; AJAX,&nbsp; JavaScript,&nbsp; jQuery</p>
+                                <p class="proj_tit">리팩토링 내용</p>
+                                <p class="proj_desc proj_desc_last">
                                     - 전체적인 코드 가독성 개선 및 효율적인 코드로 재작성.<br>
-                                    - 예매 기능을 올바르게 개선.<br>
+                                    - 예매 섹션 올바르게 수정(공연별로 공연날짜, 공연시간, 좌석에 대한 컬럼 개수가 몇개이든지 정상 작동)<br>
+                                </p>
+                                <p class="proj_tit">느낀점 & 피드백</p>
+                                <p class="proj_desc">
                                     - 어떻게 하면 @Transactional 의 롤백 처리 시에 AJAX 쪽에도 실패 내용을 전달할 수 있을까?<br>
-                                    - JPA에서 레이어 별로 Dto를 Controller(request/response), Service(Dto), Repository(Entity) 와 같이 구성하는 형태가 매력적으로 보인다. 다음 프로젝트에 적용해보자.
+                                    - JPA에서 레이어 별 Dto를 Controller(request/response),&nbsp; Service(Dto),&nbsp; Repository(Entity) 와 같이 구성하는 형태가 매력적으로 보인다. 다음 프로젝트에 적용해보자.<br>
+                                    - 예매 섹션 데이터가 <code>Map&lt;Integer, Map&lt;Integer, List&lt;&gt;&gt;&gt;</code> 형태로 복잡한데 다른 개선방안 생각해보기.<br>
+                                    - 예매 섹션의 <code>Map&lt;Integer, Map&lt;Integer, List&lt;&gt;&gt;&gt;</code> 에서 현재보다 나은 distinct 및 정렬 방법 생각해보기.<br>
                                 </p>
                             </div>
                         </div>
