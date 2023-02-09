@@ -32,7 +32,7 @@ a { text-decoration: none; color: inherit;}
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
-    background-color: inherit;
+    background-color: #f3f3f3;
 }
 .header_fixed{
     position: fixed;

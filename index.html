@@ -277,8 +277,9 @@
             flex-direction: column;
             justify-content: space-evenly;
             
-            width: 40%;
+            width: 35%;
             height: 100%;
+            margin-right: 5%;
         }
         .proj_l_box p{
             margin: 0;
@@ -286,12 +287,23 @@
         }
         .proj_img{
             width: 100%;
-            border-radius: 5px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            border: 3px solid #ffcd07;
             overflow: hidden;
             text-align: center;
+            transition: 0.2s all;
         }
         .proj_img img{
-            width: 90%;
+            width: 100%;
+        }
+        .proj_img1:hover{
+            scale: 2;
+            transform-origin: left top;
+        }
+        .proj_img2:hover{
+            scale: 2;
+            transform-origin: left bottom;
         }
         .proj_btn_box{
             display: flex;
@@ -332,6 +344,7 @@
             margin: 0;
             margin-bottom: 5px;
             color: rgb(9, 84, 113);
+            /* color: #ffe6e2; */
         }
         .proj_desc{
             font-size: 15px;
@@ -655,12 +668,12 @@
                         <div class="sec4_art_format sec4_art1_content">
                             <div class="proj_l_box">
                                 <p>#화면 예 1</p>
-                                <div class="proj_img">
-                                    <img src="./img/arton_ver1_1.jpg" alt="">
+                                <div class="proj_img proj_img1">
+                                    <img src="./img/arton_ver1_1.gif" alt="">
                                 </div>
                                 <p>#화면 예 2</p>
-                                <div class="proj_img">
-                                    <img src="./img/arton_ver1_2.jpg" alt="">
+                                <div class="proj_img proj_img2">
+                                    <img src="./img/arton_ver1_2.gif" alt="">
                                 </div>
                                 <div class="proj_btn_box">
                                     <button class="proj_btn" onclick="window.open('https://github.com/DevToddler/arton_ver1')">코드 보러가기</button>
@@ -684,7 +697,7 @@
                                     - 첫 프로젝트라 난관이 많았지만 정해진 기능까지는 어떻게든 구현해냈다.<br>
                                     - Use case 를 완벽하게 설계해두어야 코드 작업이 수월하다는 것을 느꼈다.<br>
                                     - 다른 사람이 보더라도 쉽게 알아볼수 있게 코드를 리팩토링 해보고 싶다.<br>
-                                    - 어떻게든 구현만 되도록 작성한 코드를 효율적으로 리팩토링 해보고 싶다.<br>
+                                    - 시간에 쫒겨서 작성한 코드를 효율적으로 리팩토링 해보고 싶다.<br>
                                     - Dto 사용 범위에 대해 고민해보았다.<br>
                                     - Service 레이어의 필요성 및 기능 범위에 대해 고민해보았다.<br>
                                 </p>
@@ -698,12 +711,12 @@
                         <div class="sec4_art_format sec4_art2_content">
                             <div class="proj_l_box">
                                 <p>#화면 예 1</p>
-                                <div class="proj_img">
-                                    <img src="./img/arton_ver1_1.jpg" alt="">
+                                <div class="proj_img proj_img1">
+                                    <img src="./img/arton_ver2_1.gif" alt="" onclick="window.open(this.src)">
                                 </div>
                                 <p>#화면 예 2</p>
-                                <div class="proj_img">
-                                    <img src="./img/arton_ver1_2.jpg" alt="">
+                                <div class="proj_img proj_img2">
+                                    <img src="./img/arton_ver2_2.gif" alt="">
                                 </div>
                                 <div class="proj_btn_box">
                                     <button class="proj_btn" onclick="window.open('https://github.com/DevToddler/arton_ver2')">코드 보러가기</button>
